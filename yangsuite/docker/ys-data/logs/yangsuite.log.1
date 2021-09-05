@@ -1,0 +1,1526 @@
+[2021-09-05 22:16:46.650 DEBUG                    django.template : 878]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'int', 'description': 'Timeout, in seconds, for SSH requests', 'min': 0, 'default': ''}
+[2021-09-05 22:16:46.650 DEBUG                    django.template : 878]
+Exception while resolving variable 'description' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+KeyError: 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [description] in {'label': 'Use SSL Certificate', 'type': 'boolean', 'default': False}
+[2021-09-05 22:17:37.276 DEBUG         yangsuite.ysdevices.plugin : 396]
+Calling "ping -c 1 10.0.0.1"
+[2021-09-05 22:17:37.281 DEBUG         yangsuite.ysdevices.plugin : 402]
+b'PING 10.0.0.1 (10.0.0.1) 56(84) bytes of data.\n64 bytes from 10.0.0.1: icmp_seq=1 ttl=254 time=1.79 ms\n\n--- 10.0.0.1 ping statistics ---\n1 packets transmitted, 1 received, 0% packet loss, time 0ms\nrtt min/avg/max/mdev = 1.794/1.794/1.794/0.000 ms\n'
+[2021-09-05 22:17:38.312 DEBUG     yangsuite.ysdevices.devprofile : 531]
+Result: {'base': {'label': 'ping', 'status': True}, 'netconf': {'label': 'NETCONF', 'status': True}, 'status': True}
+[2021-09-05 22:17:38.313 INFO           yangsuite.ysdevices.views : 398]
+Connectivity check for CiscoIOSXR: {'base': {'label': 'ping', 'status': True}, 'netconf': {'label': 'NETCONF', 'status': True}, 'status': True, 'os_ver': '', 'os_type': 'default'}
+[2021-09-05 22:18:11.727 DEBUG     yangsuite.ysdevices.devprofile : 184]
+Device profile list (filter: None): [{'name': 'CiscoIOSXR', 'key': 'ciscoiosxr', 'description': 'WJ'}]
+[2021-09-05 22:18:28.539 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:19:43.924 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:19:44.871 INFO           yangsuite.ysnetconf.nconf : 152]
+Starting notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:19:45.873 INFO           yangsuite.ysnetconf.nconf : 168]
+Terminating notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:19:45.873 INFO                     yangsuite.paths : 269]
+Creating new 'user' directory path /ys-data/users/admin/scratch
+[2021-09-05 22:19:45.874 INFO    yangsuite.ysnetconf.views.download : 198]
+Downloading 348 schemas from CiscoIOSXR
+[2021-09-05 22:19:46.634 INFO           yangsuite.ysnetconf.nconf : 152]
+Starting notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:19:46.635 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-aaa-lib-cfg from CiscoIOSXR
+[2021-09-05 22:19:46.763 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-aaa-locald-admin-cfg from CiscoIOSXR
+[2021-09-05 22:19:46.880 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-aaa-locald-cfg from CiscoIOSXR
+[2021-09-05 22:19:47.003 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-aaa-locald-oper from CiscoIOSXR
+[2021-09-05 22:19:47.119 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-aaa-locald-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:47.281 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-aaa-protocol-radius-cfg from CiscoIOSXR
+[2021-09-05 22:19:47.448 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-aaa-protocol-radius-oper from CiscoIOSXR
+[2021-09-05 22:19:47.569 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-aaa-protocol-radius-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:47.709 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-aaa-protocol-radius-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:19:47.845 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-aaa-tacacs-cfg from CiscoIOSXR
+[2021-09-05 22:19:47.976 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-aaa-tacacs-oper from CiscoIOSXR
+[2021-09-05 22:19:48.090 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-aaa-tacacs-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:48.211 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-bundlemgr-cfg from CiscoIOSXR
+[2021-09-05 22:19:48.360 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-bundlemgr-oper from CiscoIOSXR
+[2021-09-05 22:19:48.553 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-bundlemgr-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:48.672 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-bundlemgr-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:19:48.978 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-cdp-cfg from CiscoIOSXR
+[2021-09-05 22:19:49.090 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-cdp-oper from CiscoIOSXR
+[2021-09-05 22:19:49.209 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-cdp-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:49.334 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-clns-isis-cfg from CiscoIOSXR
+[2021-09-05 22:19:49.668 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-clns-isis-datatypes from CiscoIOSXR
+[2021-09-05 22:19:49.781 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-clns-isis-oper from CiscoIOSXR
+[2021-09-05 22:19:49.938 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-clns-isis-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:50.386 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-clns-isis-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:19:50.503 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-common-acl-datatypes from CiscoIOSXR
+[2021-09-05 22:19:50.618 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-config-mda-cfg from CiscoIOSXR
+[2021-09-05 22:19:50.745 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-config-mibs-cfg from CiscoIOSXR
+[2021-09-05 22:19:50.860 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-controller-optics-cfg from CiscoIOSXR
+[2021-09-05 22:19:50.991 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-controller-optics-oper from CiscoIOSXR
+[2021-09-05 22:19:51.105 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-controller-optics-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:51.260 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-controller-otu-cfg from CiscoIOSXR
+[2021-09-05 22:19:51.416 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-controller-otu-oper from CiscoIOSXR
+[2021-09-05 22:19:51.528 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-controller-otu-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:51.672 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-crypto-sam-cfg from CiscoIOSXR
+[2021-09-05 22:19:51.787 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-crypto-sam-oper from CiscoIOSXR
+[2021-09-05 22:19:51.910 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-crypto-sam-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:52.037 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-crypto-ssh-cfg from CiscoIOSXR
+[2021-09-05 22:19:52.161 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-crypto-ssh-oper from CiscoIOSXR
+[2021-09-05 22:19:52.275 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-crypto-ssh-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:52.402 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-drivers-media-eth-cfg from CiscoIOSXR
+[2021-09-05 22:19:52.530 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-drivers-media-eth-oper from CiscoIOSXR
+[2021-09-05 22:19:52.646 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-drivers-media-eth-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:52.949 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-es-ace-cfg from CiscoIOSXR
+[2021-09-05 22:19:53.065 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-es-acl-cfg from CiscoIOSXR
+[2021-09-05 22:19:53.178 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-es-acl-datatypes from CiscoIOSXR
+[2021-09-05 22:19:53.333 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-es-acl-oper from CiscoIOSXR
+[2021-09-05 22:19:53.452 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-es-acl-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:53.572 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-cfm-cfg from CiscoIOSXR
+[2021-09-05 22:19:53.758 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-cfm-datatypes from CiscoIOSXR
+[2021-09-05 22:19:53.875 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-cfm-oper from CiscoIOSXR
+[2021-09-05 22:19:54.031 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-cfm-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:54.234 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-cfm-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:19:54.506 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-cfm-oper-sub3 from CiscoIOSXR
+[2021-09-05 22:19:54.706 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-cfm-oper-sub4 from CiscoIOSXR
+[2021-09-05 22:19:54.861 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-link-oam-cfg from CiscoIOSXR
+[2021-09-05 22:19:55.032 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-link-oam-oper from CiscoIOSXR
+[2021-09-05 22:19:55.198 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-link-oam-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:55.426 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-lldp-cfg from CiscoIOSXR
+[2021-09-05 22:19:55.589 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-lldp-oper from CiscoIOSXR
+[2021-09-05 22:19:55.749 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-lldp-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:55.922 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ethernet-lldp-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:19:56.077 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-fib-common-oper from CiscoIOSXR
+[2021-09-05 22:19:56.235 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-fib-common-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:56.404 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-fib-common-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:19:56.657 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-fib-common-oper-sub3 from CiscoIOSXR
+[2021-09-05 22:19:56.841 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-fib-common-oper-sub4 from CiscoIOSXR
+[2021-09-05 22:19:57.001 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-flashmib-cfg from CiscoIOSXR
+[2021-09-05 22:19:57.157 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ha-eem-cfg from CiscoIOSXR
+[2021-09-05 22:19:57.278 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ha-eem-oper from CiscoIOSXR
+[2021-09-05 22:19:57.432 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ha-eem-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:57.546 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ha-eem-policy-oper from CiscoIOSXR
+[2021-09-05 22:19:57.661 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ha-eem-policy-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:57.768 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-icpe-infra-cfg from CiscoIOSXR
+[2021-09-05 22:19:57.899 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-icpe-infra-oper from CiscoIOSXR
+[2021-09-05 22:19:58.065 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-icpe-infra-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:58.181 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-icpe-infra-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:19:58.339 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-icpe-infra-oper-sub3 from CiscoIOSXR
+[2021-09-05 22:19:58.493 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-icpe-infra-oper-sub4 from CiscoIOSXR
+[2021-09-05 22:19:58.617 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-icpe-infra-oper-sub5 from CiscoIOSXR
+[2021-09-05 22:19:58.813 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-icpe-infra-oper-sub6 from CiscoIOSXR
+[2021-09-05 22:19:58.989 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-icpe-infra-oper-sub7 from CiscoIOSXR
+[2021-09-05 22:19:59.104 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-icpe-infra-oper-sub8 from CiscoIOSXR
+[2021-09-05 22:19:59.262 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ifmgr-cfg from CiscoIOSXR
+[2021-09-05 22:19:59.389 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ifmgr-oper from CiscoIOSXR
+[2021-09-05 22:19:59.513 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ifmgr-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:19:59.628 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ifmgr-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:19:59.749 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-alarm-logger-cfg from CiscoIOSXR
+[2021-09-05 22:19:59.905 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-alarm-logger-datatypes from CiscoIOSXR
+[2021-09-05 22:20:00.060 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-alarm-logger-oper from CiscoIOSXR
+[2021-09-05 22:20:00.217 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-alarm-logger-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:00.331 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-ceredundancymib-cfg from CiscoIOSXR
+[2021-09-05 22:20:00.489 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-dumper-cfg from CiscoIOSXR
+[2021-09-05 22:20:00.607 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-infra-clock-cfg from CiscoIOSXR
+[2021-09-05 22:20:00.769 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-infra-locale-cfg from CiscoIOSXR
+[2021-09-05 22:20:00.938 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-objmgr-cfg from CiscoIOSXR
+[2021-09-05 22:20:01.094 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-objmgr-oper from CiscoIOSXR
+[2021-09-05 22:20:01.294 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-objmgr-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:01.453 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-policymgr-oper from CiscoIOSXR
+[2021-09-05 22:20:01.645 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-policymgr-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:01.826 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-policymgr-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:02.131 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-rcmd-oper from CiscoIOSXR
+[2021-09-05 22:20:02.317 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-rcmd-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:02.579 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-rmf-oper from CiscoIOSXR
+[2021-09-05 22:20:02.733 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-rmf-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:02.890 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-rsi-cfg from CiscoIOSXR
+[2021-09-05 22:20:03.038 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-rsi-oper from CiscoIOSXR
+[2021-09-05 22:20:03.166 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-rsi-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:03.321 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-rsi-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:03.486 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-sla-cfg from CiscoIOSXR
+[2021-09-05 22:20:03.645 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-sla-datatypes from CiscoIOSXR
+[2021-09-05 22:20:03.817 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-sla-oper from CiscoIOSXR
+[2021-09-05 22:20:03.973 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-statsd-cfg from CiscoIOSXR
+[2021-09-05 22:20:04.091 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-statsd-oper from CiscoIOSXR
+[2021-09-05 22:20:04.208 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-statsd-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:04.337 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-syslog-cfg from CiscoIOSXR
+[2021-09-05 22:20:04.521 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-syslog-oper from CiscoIOSXR
+[2021-09-05 22:20:04.632 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-syslog-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:04.798 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-infra-systemmib-cfg from CiscoIOSXR
+[2021-09-05 22:20:04.961 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-bfd-cfg from CiscoIOSXR
+[2021-09-05 22:20:05.137 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-bfd-oper from CiscoIOSXR
+[2021-09-05 22:20:05.344 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-bfd-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:05.574 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-domain-cfg from CiscoIOSXR
+[2021-09-05 22:20:05.741 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-domain-oper from CiscoIOSXR
+[2021-09-05 22:20:05.897 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-domain-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:06.124 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-iarm-datatypes from CiscoIOSXR
+[2021-09-05 22:20:06.242 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-icmp-cfg from CiscoIOSXR
+[2021-09-05 22:20:06.364 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-iep-cfg from CiscoIOSXR
+[2021-09-05 22:20:06.529 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-iep-oper from CiscoIOSXR
+[2021-09-05 22:20:06.685 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-iep-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:06.800 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-mobileip-cfg from CiscoIOSXR
+[2021-09-05 22:20:07.038 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-ntp-admin-oper from CiscoIOSXR
+[2021-09-05 22:20:07.156 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-ntp-admin-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:07.333 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-ntp-cfg from CiscoIOSXR
+[2021-09-05 22:20:07.479 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-ntp-oper from CiscoIOSXR
+[2021-09-05 22:20:07.638 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-ntp-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:07.813 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-pfilter-cfg from CiscoIOSXR
+[2021-09-05 22:20:07.993 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-pfilter-oper from CiscoIOSXR
+[2021-09-05 22:20:08.108 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-rib-cfg from CiscoIOSXR
+[2021-09-05 22:20:08.225 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-rib-ipv4-oper from CiscoIOSXR
+[2021-09-05 22:20:08.413 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-rib-ipv4-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:08.553 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-rib-ipv6-oper from CiscoIOSXR
+[2021-09-05 22:20:08.741 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-rib-ipv6-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:08.922 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-rsvp-cfg from CiscoIOSXR
+[2021-09-05 22:20:09.082 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-rsvp-oper from CiscoIOSXR
+[2021-09-05 22:20:09.318 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-rsvp-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:09.676 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-static-cfg from CiscoIOSXR
+[2021-09-05 22:20:09.849 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-tcp-cfg from CiscoIOSXR
+[2021-09-05 22:20:10.021 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-tcp-oper from CiscoIOSXR
+[2021-09-05 22:20:10.201 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-tcp-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:10.442 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-tcp-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:10.597 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-tcp-oper-sub3 from CiscoIOSXR
+[2021-09-05 22:20:10.830 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-tcp-oper-sub4 from CiscoIOSXR
+[2021-09-05 22:20:10.972 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-tcp-oper-sub5 from CiscoIOSXR
+[2021-09-05 22:20:11.145 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-udp-cfg from CiscoIOSXR
+[2021-09-05 22:20:11.264 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-udp-oper from CiscoIOSXR
+[2021-09-05 22:20:11.387 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-udp-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:11.511 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-udp-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:11.656 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-udp-oper-sub3 from CiscoIOSXR
+[2021-09-05 22:20:11.813 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ip-udp-oper-sub4 from CiscoIOSXR
+[2021-09-05 22:20:11.969 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-ace-cfg from CiscoIOSXR
+[2021-09-05 22:20:12.145 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-acl-cfg from CiscoIOSXR
+[2021-09-05 22:20:12.268 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-acl-datatypes from CiscoIOSXR
+[2021-09-05 22:20:12.457 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-acl-oper from CiscoIOSXR
+[2021-09-05 22:20:12.581 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-acl-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:12.757 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-arp-cfg from CiscoIOSXR
+[2021-09-05 22:20:12.889 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-arp-oper from CiscoIOSXR
+[2021-09-05 22:20:13.011 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-arp-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:13.145 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-arp-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:13.306 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-bgp-cfg from CiscoIOSXR
+[2021-09-05 22:20:13.739 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-bgp-datatypes from CiscoIOSXR
+[2021-09-05 22:20:13.906 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-bgp-oper from CiscoIOSXR
+[2021-09-05 22:20:14.105 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-bgp-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:14.867 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-hsrp-cfg from CiscoIOSXR
+[2021-09-05 22:20:15.078 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-hsrp-oper from CiscoIOSXR
+[2021-09-05 22:20:15.241 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-hsrp-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:15.462 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-io-cfg from CiscoIOSXR
+[2021-09-05 22:20:15.592 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-io-oper from CiscoIOSXR
+[2021-09-05 22:20:15.754 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-io-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:15.886 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-io-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:16.016 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-ma-cfg from CiscoIOSXR
+[2021-09-05 22:20:16.186 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-ma-oper from CiscoIOSXR
+[2021-09-05 22:20:16.306 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-ma-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:16.435 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-ospf-cfg from CiscoIOSXR
+[2021-09-05 22:20:16.766 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-ospf-oper from CiscoIOSXR
+[2021-09-05 22:20:16.951 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-ospf-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:17.110 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-ospf-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:17.516 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-telnet-cfg from CiscoIOSXR
+[2021-09-05 22:20:17.675 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-telnet-mgmt-cfg from CiscoIOSXR
+[2021-09-05 22:20:17.834 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-vrrp-cfg from CiscoIOSXR
+[2021-09-05 22:20:18.047 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-vrrp-oper from CiscoIOSXR
+[2021-09-05 22:20:18.211 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv4-vrrp-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:18.413 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-ace-cfg from CiscoIOSXR
+[2021-09-05 22:20:18.548 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-acl-cfg from CiscoIOSXR
+[2021-09-05 22:20:18.675 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-acl-datatypes from CiscoIOSXR
+[2021-09-05 22:20:18.870 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-acl-oper from CiscoIOSXR
+[2021-09-05 22:20:18.993 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-acl-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:19.177 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-io-cfg from CiscoIOSXR
+[2021-09-05 22:20:19.292 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-io-oper from CiscoIOSXR
+[2021-09-05 22:20:19.449 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-io-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:19.625 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-ma-cfg from CiscoIOSXR
+[2021-09-05 22:20:19.756 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-ma-oper from CiscoIOSXR
+[2021-09-05 22:20:19.876 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-ma-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:20.006 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-nd-cfg from CiscoIOSXR
+[2021-09-05 22:20:20.141 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-nd-oper from CiscoIOSXR
+[2021-09-05 22:20:20.261 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-nd-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:20.395 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-new-dhcpv6d-oper from CiscoIOSXR
+[2021-09-05 22:20:20.527 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-new-dhcpv6d-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:20.701 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-ospfv3-cfg from CiscoIOSXR
+[2021-09-05 22:20:21.022 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-ospfv3-oper from CiscoIOSXR
+[2021-09-05 22:20:21.207 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-ipv6-ospfv3-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:21.502 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-l2-eth-infra-cfg from CiscoIOSXR
+[2021-09-05 22:20:21.667 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-l2-eth-infra-datatypes from CiscoIOSXR
+[2021-09-05 22:20:21.826 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-l2-eth-infra-oper from CiscoIOSXR
+[2021-09-05 22:20:21.951 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-l2-eth-infra-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:22.105 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-l2-eth-infra-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:22.294 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-l2-eth-infra-oper-sub3 from CiscoIOSXR
+[2021-09-05 22:20:22.409 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-l2vpn-cfg from CiscoIOSXR
+[2021-09-05 22:20:22.821 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-l2vpn-oper from CiscoIOSXR
+[2021-09-05 22:20:23.090 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-l2vpn-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:23.249 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-l2vpn-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:23.414 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-l2vpn-oper-sub3 from CiscoIOSXR
+[2021-09-05 22:20:23.847 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-l2vpn-oper-sub4 from CiscoIOSXR
+[2021-09-05 22:20:24.161 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-lib-keychain-cfg from CiscoIOSXR
+[2021-09-05 22:20:24.294 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-lib-keychain-macsec-cfg from CiscoIOSXR
+[2021-09-05 22:20:24.417 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-lib-keychain-oper from CiscoIOSXR
+[2021-09-05 22:20:24.573 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-lib-keychain-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:24.689 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-lib-mpp-cfg from CiscoIOSXR
+[2021-09-05 22:20:24.877 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-lib-mpp-oper from CiscoIOSXR
+[2021-09-05 22:20:25.038 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-lib-mpp-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:25.156 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-lpts-lib-cfg from CiscoIOSXR
+[2021-09-05 22:20:25.276 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-lpts-pre-ifib-cfg from CiscoIOSXR
+[2021-09-05 22:20:25.461 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-lpts-pre-ifib-oper from CiscoIOSXR
+[2021-09-05 22:20:25.578 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-lpts-pre-ifib-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:25.684 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-man-netconf-cfg from CiscoIOSXR
+[2021-09-05 22:20:25.800 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-man-xml-ttyagent-cfg from CiscoIOSXR
+[2021-09-05 22:20:25.931 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-man-xml-ttyagent-oper from CiscoIOSXR
+[2021-09-05 22:20:26.165 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-man-xml-ttyagent-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:26.296 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mdrv-lib-cfg from CiscoIOSXR
+[2021-09-05 22:20:26.414 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-ldp-cfg from CiscoIOSXR
+[2021-09-05 22:20:26.645 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-ldp-cfg-datatypes from CiscoIOSXR
+[2021-09-05 22:20:26.760 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-ldp-oper from CiscoIOSXR
+[2021-09-05 22:20:26.953 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-ldp-oper-datatypes from CiscoIOSXR
+[2021-09-05 22:20:27.064 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-ldp-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:27.325 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-ldp-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:27.447 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-lsd-cfg from CiscoIOSXR
+[2021-09-05 22:20:27.610 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-lsd-oper from CiscoIOSXR
+[2021-09-05 22:20:27.741 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-lsd-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:27.999 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-oam-cfg from CiscoIOSXR
+[2021-09-05 22:20:28.157 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-static-cfg from CiscoIOSXR
+[2021-09-05 22:20:28.329 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-static-oper from CiscoIOSXR
+[2021-09-05 22:20:28.444 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-static-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:28.568 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-te-cfg from CiscoIOSXR
+[2021-09-05 22:20:29.070 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-te-datatypes from CiscoIOSXR
+[2021-09-05 22:20:29.369 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-te-oper from CiscoIOSXR
+[2021-09-05 22:20:29.661 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-te-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:29.841 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-te-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:29.958 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-te-oper-sub3 from CiscoIOSXR
+[2021-09-05 22:20:30.118 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-te-oper-sub4 from CiscoIOSXR
+[2021-09-05 22:20:30.277 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-te-oper-sub5 from CiscoIOSXR
+[2021-09-05 22:20:31.014 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-te-oper-sub6 from CiscoIOSXR
+[2021-09-05 22:20:31.232 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-te-oper-sub7 from CiscoIOSXR
+[2021-09-05 22:20:31.442 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-te-oper-sub8 from CiscoIOSXR
+[2021-09-05 22:20:31.602 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-vpn-oper from CiscoIOSXR
+[2021-09-05 22:20:31.757 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-mpls-vpn-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:31.918 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-nto-misc-shprocmem-oper from CiscoIOSXR
+[2021-09-05 22:20:32.074 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-nto-misc-shprocmem-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:32.229 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-parser-cfg from CiscoIOSXR
+[2021-09-05 22:20:32.349 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-pfi-im-cmd-oper from CiscoIOSXR
+[2021-09-05 22:20:32.514 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-pfi-im-cmd-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:32.868 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-pfi-im-cmd-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:32.988 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-plat-chas-invmgr-oper from CiscoIOSXR
+[2021-09-05 22:20:33.121 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-plat-chas-invmgr-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:33.302 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-plat-chas-invmgr-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:33.466 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-pmengine-cfg from CiscoIOSXR
+[2021-09-05 22:20:33.782 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-pmengine-oper from CiscoIOSXR
+[2021-09-05 22:20:34.074 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-pmengine-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:34.309 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-policy-repository-cfg from CiscoIOSXR
+[2021-09-05 22:20:34.441 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-policy-repository-oper from CiscoIOSXR
+[2021-09-05 22:20:34.609 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-policy-repository-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:34.780 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-qos-ma-oper from CiscoIOSXR
+[2021-09-05 22:20:34.926 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-qos-ma-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:35.038 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-qos-ma-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:35.237 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-rgmgr-cfg from CiscoIOSXR
+[2021-09-05 22:20:35.401 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-rgmgr-oper from CiscoIOSXR
+[2021-09-05 22:20:35.557 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-rgmgr-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:35.713 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-segment-routing-ms-cfg from CiscoIOSXR
+[2021-09-05 22:20:35.840 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-segment-routing-ms-oper from CiscoIOSXR
+[2021-09-05 22:20:36.002 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-segment-routing-ms-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:36.166 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-shellutil-cfg from CiscoIOSXR
+[2021-09-05 22:20:36.286 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-shellutil-filesystem-oper from CiscoIOSXR
+[2021-09-05 22:20:36.445 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-shellutil-filesystem-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:36.601 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-shellutil-oper from CiscoIOSXR
+[2021-09-05 22:20:36.714 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-shellutil-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:36.828 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-agent-cfg from CiscoIOSXR
+[2021-09-05 22:20:37.094 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-agent-oper from CiscoIOSXR
+[2021-09-05 22:20:37.236 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-agent-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:37.402 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-agent-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:37.549 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-agent-oper-sub3 from CiscoIOSXR
+[2021-09-05 22:20:37.663 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-agent-oper-sub4 from CiscoIOSXR
+[2021-09-05 22:20:37.818 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-agent-oper-sub5 from CiscoIOSXR
+[2021-09-05 22:20:37.973 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-agent-oper-sub6 from CiscoIOSXR
+[2021-09-05 22:20:38.129 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-entitymib-cfg from CiscoIOSXR
+[2021-09-05 22:20:38.286 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-entstatemib-cfg from CiscoIOSXR
+[2021-09-05 22:20:38.441 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-frucontrolmib-cfg from CiscoIOSXR
+[2021-09-05 22:20:38.555 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-ifmib-cfg from CiscoIOSXR
+[2021-09-05 22:20:38.722 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-ifmib-oper from CiscoIOSXR
+[2021-09-05 22:20:38.882 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-ifmib-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:38.997 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-snmp-syslogmib-cfg from CiscoIOSXR
+[2021-09-05 22:20:39.153 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-traffmon-netflow-cfg from CiscoIOSXR
+[2021-09-05 22:20:39.297 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-management-cfg from CiscoIOSXR
+[2021-09-05 22:20:39.460 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-management-cmd-oper from CiscoIOSXR
+[2021-09-05 22:20:39.617 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-management-cmd-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:39.776 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-management-datatypes from CiscoIOSXR
+[2021-09-05 22:20:39.892 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-management-oper from CiscoIOSXR
+[2021-09-05 22:20:40.050 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-management-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:40.178 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-server-cfg from CiscoIOSXR
+[2021-09-05 22:20:40.304 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-server-oper from CiscoIOSXR
+[2021-09-05 22:20:40.428 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-server-oper-sub1 from CiscoIOSXR
+[2021-09-05 22:20:40.581 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-server-oper-sub2 from CiscoIOSXR
+[2021-09-05 22:20:40.694 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-server-oper-sub3 from CiscoIOSXR
+[2021-09-05 22:20:40.804 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-server-oper-sub4 from CiscoIOSXR
+[2021-09-05 22:20:40.916 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-server-oper-sub5 from CiscoIOSXR
+[2021-09-05 22:20:41.069 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-tty-vty-cfg from CiscoIOSXR
+[2021-09-05 22:20:41.184 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-types from CiscoIOSXR
+[2021-09-05 22:20:41.362 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema Cisco-IOS-XR-wd-cfg from CiscoIOSXR
+[2021-09-05 22:20:41.517 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema bgp from CiscoIOSXR
+[2021-09-05 22:20:41.673 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema bgp-multiprotocol from CiscoIOSXR
+[2021-09-05 22:20:41.814 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema bgp-operational from CiscoIOSXR
+[2021-09-05 22:20:41.987 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema bgp-policy from CiscoIOSXR
+[2021-09-05 22:20:42.121 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema bgp-types from CiscoIOSXR
+[2021-09-05 22:20:42.289 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema cisco-xr-bgp-deviations from CiscoIOSXR
+[2021-09-05 22:20:42.488 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema cisco-xr-bgp-policy-deviations from CiscoIOSXR
+[2021-09-05 22:20:42.640 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema cisco-xr-netconf-monitoring-deviations from CiscoIOSXR
+[2021-09-05 22:20:42.751 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema cisco-xr-routing-policy-deviations from CiscoIOSXR
+[2021-09-05 22:20:42.905 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema ietf-inet-types from CiscoIOSXR
+[2021-09-05 22:20:43.085 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema ietf-yang-types from CiscoIOSXR
+[2021-09-05 22:20:43.222 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema openconfig-extensions from CiscoIOSXR
+[2021-09-05 22:20:43.379 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema openconfig-if-aggregate from CiscoIOSXR
+[2021-09-05 22:20:43.553 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema openconfig-if-ethernet from CiscoIOSXR
+[2021-09-05 22:20:43.679 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema openconfig-interfaces from CiscoIOSXR
+[2021-09-05 22:20:43.873 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema openconfig-mpls from CiscoIOSXR
+[2021-09-05 22:20:44.012 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema openconfig-mpls-ldp from CiscoIOSXR
+[2021-09-05 22:20:44.126 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema openconfig-mpls-rsvp from CiscoIOSXR
+[2021-09-05 22:20:44.321 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema openconfig-mpls-sr from CiscoIOSXR
+[2021-09-05 22:20:44.490 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema openconfig-mpls-types from CiscoIOSXR
+[2021-09-05 22:20:44.653 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema openconfig-types from CiscoIOSXR
+[2021-09-05 22:20:44.817 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema policy-types from CiscoIOSXR
+[2021-09-05 22:20:45.044 INFO    yangsuite.ysnetconf.views.download : 204]
+Getting schema routing-policy from CiscoIOSXR
+[2021-09-05 22:20:45.662 INFO           yangsuite.ysnetconf.nconf : 168]
+Terminating notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:20:45.662 INFO    yangsuite.ysnetconf.views.download : 236]
+Schema download from CiscoIOSXR completed
+[2021-09-05 22:20:45.663 WARNING yangsuite.ysnetconf.views.download : 246]
+Schema download finished, but didn't reach the expected number of schemas (downloaded 346, expected 348)
+[2021-09-05 22:20:45.664 DEBUG   yangsuite.ysfilemanager.filemanager.utility : 175]
+Adding 346 files from /ys-data/users/admin/scratch/tmpr73rtcjy to /ys-data/users/admin/repositories/ciscoxr
+[2021-09-05 22:20:45.665 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-aaa-lib-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.665 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-aaa-locald-admin-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.667 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-aaa-locald-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.668 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-aaa-locald-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.669 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-aaa-locald-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.669 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-aaa-protocol-radius-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.672 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-aaa-protocol-radius-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.673 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-aaa-protocol-radius-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.674 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-aaa-protocol-radius-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.679 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-aaa-tacacs-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.680 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-aaa-tacacs-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.681 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-aaa-tacacs-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.681 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-bundlemgr-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.682 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-bundlemgr-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.683 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-bundlemgr-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.688 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-bundlemgr-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.689 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-cdp-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.690 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-cdp-oper-sub1@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.691 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-cdp-oper@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.691 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-clns-isis-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.701 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-clns-isis-datatypes@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.701 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-clns-isis-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.708 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-clns-isis-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.709 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-clns-isis-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.710 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-common-acl-datatypes@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.711 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-config-mda-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.711 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-config-mibs-cfg@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.712 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-controller-optics-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.712 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-controller-optics-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.714 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-controller-optics-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.715 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-controller-otu-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.716 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-controller-otu-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.717 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-controller-otu-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.717 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-crypto-sam-cfg@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.718 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-crypto-sam-oper-sub1@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.718 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-crypto-sam-oper@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.719 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-crypto-ssh-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.719 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-crypto-ssh-oper-sub1@2015-06-02.yang to find module name/revision
+[2021-09-05 22:20:45.720 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-crypto-ssh-oper@2015-06-02.yang to find module name/revision
+[2021-09-05 22:20:45.720 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-drivers-media-eth-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.721 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-drivers-media-eth-oper-sub1@2015-10-14.yang to find module name/revision
+[2021-09-05 22:20:45.724 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-drivers-media-eth-oper@2015-10-14.yang to find module name/revision
+[2021-09-05 22:20:45.725 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-es-ace-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.726 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-es-acl-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.726 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-es-acl-datatypes@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.726 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-es-acl-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.727 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-es-acl-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.728 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-cfm-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.730 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-cfm-datatypes@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.730 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-cfm-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.732 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-cfm-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.735 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-cfm-oper-sub3@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.736 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-cfm-oper-sub4@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.737 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-cfm-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.738 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-link-oam-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.740 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-link-oam-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.741 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-link-oam-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.742 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-lldp-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.743 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-lldp-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.744 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-lldp-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.744 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ethernet-lldp-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.745 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-fib-common-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.747 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-fib-common-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.750 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-fib-common-oper-sub3@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.751 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-fib-common-oper-sub4@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.752 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-fib-common-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.753 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-flashmib-cfg@2015-12-15.yang to find module name/revision
+[2021-09-05 22:20:45.753 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ha-eem-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.754 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ha-eem-oper-sub1@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.755 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ha-eem-oper@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.755 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ha-eem-policy-oper@2016-02-05.yang to find module name/revision
+[2021-09-05 22:20:45.755 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-icpe-infra-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.756 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-icpe-infra-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.757 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-icpe-infra-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.757 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-icpe-infra-oper-sub3@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.758 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-icpe-infra-oper-sub4@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.758 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-icpe-infra-oper-sub5@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.759 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-icpe-infra-oper-sub6@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.760 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-icpe-infra-oper-sub7@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.761 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-icpe-infra-oper-sub8@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.761 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-icpe-infra-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.762 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ifmgr-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.764 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ifmgr-oper-sub1@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.765 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ifmgr-oper-sub2@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.765 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ifmgr-oper@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.766 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-alarm-logger-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.767 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-alarm-logger-datatypes@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.767 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-alarm-logger-oper-sub1@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.768 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-alarm-logger-oper@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.768 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-ceredundancymib-cfg@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.769 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-dumper-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.769 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-infra-clock-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.770 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-infra-locale-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.772 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-objmgr-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.773 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-objmgr-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.773 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-objmgr-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.775 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-policymgr-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.778 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-policymgr-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.783 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-policymgr-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.784 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-rcmd-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.786 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-rcmd-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.787 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-rmf-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.787 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-rmf-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.788 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-rsi-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.788 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-rsi-oper-sub1@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.789 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-rsi-oper-sub2@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.789 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-rsi-oper@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.790 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-sla-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.790 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-sla-datatypes@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.791 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-sla-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.791 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-statsd-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.792 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-statsd-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.792 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-statsd-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.793 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-syslog-cfg@2015-10-08.yang to find module name/revision
+[2021-09-05 22:20:45.794 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-syslog-oper-sub1@2015-12-01.yang to find module name/revision
+[2021-09-05 22:20:45.795 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-syslog-oper@2015-12-01.yang to find module name/revision
+[2021-09-05 22:20:45.795 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-infra-systemmib-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.795 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-bfd-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.796 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-bfd-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.798 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-bfd-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.800 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-domain-cfg@2015-05-13.yang to find module name/revision
+[2021-09-05 22:20:45.800 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-domain-oper-sub1@2015-09-29.yang to find module name/revision
+[2021-09-05 22:20:45.801 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-domain-oper@2015-09-29.yang to find module name/revision
+[2021-09-05 22:20:45.801 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-iarm-datatypes@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.801 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-icmp-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.802 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-iep-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.802 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-iep-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.802 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-iep-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.803 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-mobileip-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.804 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-ntp-admin-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.805 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-ntp-admin-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.806 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-ntp-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.807 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-ntp-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.807 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-ntp-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.808 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-pfilter-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.808 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-pfilter-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.809 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-rib-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.809 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-rib-ipv4-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.810 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-rib-ipv4-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.811 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-rib-ipv6-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.812 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-rib-ipv6-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.813 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-rsvp-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.814 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-rsvp-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.818 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-rsvp-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.819 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-static-cfg@2015-09-10.yang to find module name/revision
+[2021-09-05 22:20:45.820 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-tcp-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.821 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-tcp-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.823 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-tcp-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.823 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-tcp-oper-sub3@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.825 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-tcp-oper-sub4@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.826 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-tcp-oper-sub5@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.826 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-tcp-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.827 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-udp-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.827 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-udp-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.829 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-udp-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.830 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-udp-oper-sub3@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.831 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-udp-oper-sub4@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.831 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ip-udp-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.832 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-ace-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.832 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-acl-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.833 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-acl-datatypes@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.834 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-acl-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.835 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-acl-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.835 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-arp-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.836 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-arp-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.837 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-arp-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.837 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-arp-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.838 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-bgp-cfg@2015-08-27.yang to find module name/revision
+[2021-09-05 22:20:45.843 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-bgp-datatypes@2015-08-27.yang to find module name/revision
+[2021-09-05 22:20:45.843 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-bgp-oper-sub1@2015-08-27.yang to find module name/revision
+[2021-09-05 22:20:45.855 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-bgp-oper@2015-08-27.yang to find module name/revision
+[2021-09-05 22:20:45.857 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-hsrp-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.858 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-hsrp-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.860 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-hsrp-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.860 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-io-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.861 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-io-oper-sub1@2015-10-20.yang to find module name/revision
+[2021-09-05 22:20:45.861 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-io-oper-sub2@2015-10-20.yang to find module name/revision
+[2021-09-05 22:20:45.866 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-io-oper@2015-10-20.yang to find module name/revision
+[2021-09-05 22:20:45.866 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-ma-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.867 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-ma-oper-sub1@2015-10-20.yang to find module name/revision
+[2021-09-05 22:20:45.867 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-ma-oper@2015-10-20.yang to find module name/revision
+[2021-09-05 22:20:45.868 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-ospf-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.872 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-ospf-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.872 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-ospf-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.877 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-ospf-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.879 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-telnet-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.879 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-telnet-mgmt-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.879 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-vrrp-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.881 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-vrrp-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.882 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv4-vrrp-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.882 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-ace-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.883 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-acl-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.884 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-acl-datatypes@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.885 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-acl-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.885 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-acl-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.886 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-io-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.886 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-io-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.887 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-io-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.887 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-ma-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.888 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-ma-oper-sub1@2015-10-20.yang to find module name/revision
+[2021-09-05 22:20:45.889 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-ma-oper@2015-10-20.yang to find module name/revision
+[2021-09-05 22:20:45.889 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-nd-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.890 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-nd-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.891 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-nd-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.891 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-new-dhcpv6d-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.892 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-new-dhcpv6d-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.893 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-ospfv3-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.897 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-ospfv3-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.900 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-ipv6-ospfv3-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.901 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-l2-eth-infra-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.902 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-l2-eth-infra-datatypes@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.903 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-l2-eth-infra-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.903 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-l2-eth-infra-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.904 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-l2-eth-infra-oper-sub3@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.904 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-l2-eth-infra-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.905 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-l2vpn-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.910 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-l2vpn-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.910 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-l2vpn-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.911 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-l2vpn-oper-sub3@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.916 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-l2vpn-oper-sub4@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.920 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-l2vpn-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.922 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-lib-keychain-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.923 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-lib-keychain-macsec-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.923 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-lib-keychain-oper-sub1@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.924 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-lib-keychain-oper@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.924 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-lib-mpp-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.925 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-lib-mpp-oper-sub1@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.925 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-lib-mpp-oper@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:45.926 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-lpts-lib-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.926 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-lpts-pre-ifib-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.927 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-lpts-pre-ifib-oper@2016-02-22.yang to find module name/revision
+[2021-09-05 22:20:45.927 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-man-netconf-cfg@2016-03-15.yang to find module name/revision
+[2021-09-05 22:20:45.928 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-man-xml-ttyagent-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.928 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-man-xml-ttyagent-oper-sub1@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.929 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-man-xml-ttyagent-oper@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:45.929 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mdrv-lib-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.929 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-ldp-cfg-datatypes@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.930 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-ldp-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.932 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-ldp-oper-datatypes@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.932 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-ldp-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.935 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-ldp-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.936 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-ldp-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.937 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-lsd-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.937 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-lsd-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.940 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-lsd-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.941 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-oam-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.941 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-static-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.942 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-static-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.942 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-static-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.943 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-te-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.949 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-te-datatypes@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.959 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-te-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.961 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-te-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.961 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-te-oper-sub3@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.962 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-te-oper-sub4@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:45.966 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-te-oper-sub5@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.004 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-te-oper-sub6@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.011 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-te-oper-sub7@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.012 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-te-oper-sub8@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.015 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-te-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.017 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-vpn-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.018 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-mpls-vpn-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.021 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-nto-misc-shprocmem-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.022 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-nto-misc-shprocmem-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.022 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-parser-cfg@2015-06-02.yang to find module name/revision
+[2021-09-05 22:20:46.023 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-pfi-im-cmd-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.028 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-pfi-im-cmd-oper-sub2@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.028 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-pfi-im-cmd-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.029 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-plat-chas-invmgr-oper-sub1@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.030 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-plat-chas-invmgr-oper-sub2@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.030 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-plat-chas-invmgr-oper@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.031 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-pmengine-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.034 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-pmengine-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.036 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-pmengine-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.038 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-policy-repository-cfg@2015-08-27.yang to find module name/revision
+[2021-09-05 22:20:46.039 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-policy-repository-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.040 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-policy-repository-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.040 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-qos-ma-oper-sub1@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.041 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-qos-ma-oper-sub2@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.042 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-qos-ma-oper@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.043 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-rgmgr-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:46.043 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-rgmgr-oper-sub1@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.043 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-rgmgr-oper@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.044 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-segment-routing-ms-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.044 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-segment-routing-ms-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.045 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-segment-routing-ms-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.045 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-shellutil-cfg@2015-10-12.yang to find module name/revision
+[2021-09-05 22:20:46.045 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-shellutil-filesystem-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.046 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-shellutil-filesystem-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.046 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-shellutil-oper-sub1@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.047 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-shellutil-oper@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.047 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-agent-cfg@2015-10-27.yang to find module name/revision
+[2021-09-05 22:20:46.049 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-agent-oper-sub1@2015-10-08.yang to find module name/revision
+[2021-09-05 22:20:46.050 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-agent-oper-sub2@2015-10-08.yang to find module name/revision
+[2021-09-05 22:20:46.051 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-agent-oper-sub3@2015-10-08.yang to find module name/revision
+[2021-09-05 22:20:46.051 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-agent-oper-sub4@2015-10-08.yang to find module name/revision
+[2021-09-05 22:20:46.052 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-agent-oper-sub5@2015-10-08.yang to find module name/revision
+[2021-09-05 22:20:46.052 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-agent-oper-sub6@2015-10-08.yang to find module name/revision
+[2021-09-05 22:20:46.052 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-agent-oper@2015-10-08.yang to find module name/revision
+[2021-09-05 22:20:46.053 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-entitymib-cfg@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.053 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-entstatemib-cfg@2015-07-27.yang to find module name/revision
+[2021-09-05 22:20:46.054 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-frucontrolmib-cfg@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.054 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-ifmib-cfg@2015-05-14.yang to find module name/revision
+[2021-09-05 22:20:46.055 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-ifmib-oper-sub1@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.055 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-ifmib-oper@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.055 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-snmp-syslogmib-cfg@2015-12-01.yang to find module name/revision
+[2021-09-05 22:20:46.056 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-traffmon-netflow-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.056 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-management-cfg@2015-09-25.yang to find module name/revision
+[2021-09-05 22:20:46.057 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-management-cmd-oper-sub1@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.057 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-management-cmd-oper@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.058 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-management-datatypes@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.058 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-management-oper-sub1@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.058 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-management-oper@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.059 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-server-cfg@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:46.059 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-server-oper-sub1@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:46.060 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-server-oper-sub2@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:46.060 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-server-oper-sub3@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:46.060 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-server-oper-sub4@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:46.061 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-server-oper-sub5@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:46.061 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-server-oper@2015-07-30.yang to find module name/revision
+[2021-09-05 22:20:46.062 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-tty-vty-cfg@2015-01-07.yang to find module name/revision
+[2021-09-05 22:20:46.062 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-types@2015-06-29.yang to find module name/revision
+[2021-09-05 22:20:46.067 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/Cisco-IOS-XR-wd-cfg@2015-11-09.yang to find module name/revision
+[2021-09-05 22:20:46.067 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/bgp-multiprotocol@2015-05-15.yang to find module name/revision
+[2021-09-05 22:20:46.068 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/bgp-operational@2015-05-15.yang to find module name/revision
+[2021-09-05 22:20:46.069 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/bgp-policy@2015-05-15.yang to find module name/revision
+[2021-09-05 22:20:46.069 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/bgp-types@2015-05-15.yang to find module name/revision
+[2021-09-05 22:20:46.070 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/bgp@2015-05-15.yang to find module name/revision
+[2021-09-05 22:20:46.072 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/cisco-xr-bgp-deviations@2015-10-21.yang to find module name/revision
+[2021-09-05 22:20:46.073 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/cisco-xr-bgp-policy-deviations@2015-10-21.yang to find module name/revision
+[2021-09-05 22:20:46.074 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/cisco-xr-netconf-monitoring-deviations@2016-02-16.yang to find module name/revision
+[2021-09-05 22:20:46.074 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/cisco-xr-routing-policy-deviations@2015-10-21.yang to find module name/revision
+[2021-09-05 22:20:46.075 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/ietf-inet-types@2013-07-15.yang to find module name/revision
+[2021-09-05 22:20:46.075 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/ietf-yang-types@2013-07-15.yang to find module name/revision
+[2021-09-05 22:20:46.076 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/openconfig-extensions@2015-10-09.yang to find module name/revision
+[2021-09-05 22:20:46.076 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/openconfig-if-aggregate@2015-11-20.yang to find module name/revision
+[2021-09-05 22:20:46.077 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/openconfig-if-ethernet@2015-11-20.yang to find module name/revision
+[2021-09-05 22:20:46.078 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/openconfig-interfaces@2015-11-20.yang to find module name/revision
+[2021-09-05 22:20:46.079 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/openconfig-mpls-ldp@2015-11-05.yang to find module name/revision
+[2021-09-05 22:20:46.080 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/openconfig-mpls-rsvp@2015-11-05.yang to find module name/revision
+[2021-09-05 22:20:46.081 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/openconfig-mpls-sr@2015-11-05.yang to find module name/revision
+[2021-09-05 22:20:46.081 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/openconfig-mpls-types@2015-11-05.yang to find module name/revision
+[2021-09-05 22:20:46.082 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/openconfig-mpls@2015-11-05.yang to find module name/revision
+[2021-09-05 22:20:46.083 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/openconfig-types@2015-10-09.yang to find module name/revision
+[2021-09-05 22:20:46.084 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/policy-types@2015-05-15.yang to find module name/revision
+[2021-09-05 22:20:46.084 DEBUG   yangsuite.ysfilemanager.quickparser :  90]
+Checking contents of /ys-data/users/admin/scratch/tmpr73rtcjy/routing-policy@2015-05-15.yang to find module name/revision
+[2021-09-05 22:20:46.088 DEBUG   yangsuite.ysfilemanager.filemanager.utility : 225]
+File add/upload completed. 346 files added, 0 updated, 0 unchanged, 0 errors
+[2021-09-05 22:20:46.121 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:20:46.567 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'Cisco-IOS-XR-ha-eem-policy-oper': depends on module 'Cisco-IOS-XR-ha-eem-policy-oper-sub1' that was not scanned
+[2021-09-05 22:20:46.568 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'Cisco-IOS-XR-lpts-pre-ifib-oper': depends on module 'Cisco-IOS-XR-lpts-pre-ifib-oper-sub1' that was not scanned
+[2021-09-05 22:20:46.568 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'cisco-xr-netconf-monitoring-deviations': depends on module 'ietf-netconf-monitoring' that was not scanned
+[2021-09-05 22:20:46.568 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-if-aggregate': depends on module 'iana-if-type' that was not scanned
+[2021-09-05 22:20:46.568 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-interfaces': depends on module 'ietf-interfaces' that was not scanned
+[2021-09-05 22:20:46.568 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-mpls': depends on module 'openconfig-mpls-igp' that was not scanned
+[2021-09-05 22:20:46.569 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-mpls': depends on module 'openconfig-mpls-static' that was not scanned
+[2021-09-05 22:20:46.569 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-mpls': depends on module 'openconfig-mpls-te' that was not scanned
+[2021-09-05 22:20:46.571 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-aaa-lib-cfg@2015-11-09
+[2021-09-05 22:20:46.571 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-aaa-locald-admin-cfg@2015-11-09
+[2021-09-05 22:20:46.571 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-aaa-locald-cfg@2015-11-09
+[2021-09-05 22:20:46.571 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-aaa-locald-oper@2015-11-09
+[2021-09-05 22:20:46.571 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-aaa-locald-oper-sub1@2015-11-09
+[2021-09-05 22:20:46.572 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-aaa-protocol-radius-cfg@2015-11-09
+[2021-09-05 22:20:46.572 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 6 dependencies of Cisco-IOS-XR-aaa-protocol-radius-oper@2015-11-09
+[2021-09-05 22:20:46.572 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-aaa-protocol-radius-oper-sub1@2015-11-09
+[2021-09-05 22:20:46.572 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-aaa-protocol-radius-oper-sub2@2015-11-09
+[2021-09-05 22:20:46.572 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-aaa-tacacs-cfg@2015-11-09
+[2021-09-05 22:20:46.572 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-aaa-tacacs-oper@2015-11-09
+[2021-09-05 22:20:46.572 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-aaa-tacacs-oper-sub1@2015-11-09
+[2021-09-05 22:20:46.572 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-bundlemgr-cfg@2015-11-09
+[2021-09-05 22:20:46.573 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-bundlemgr-oper@2015-11-09
+[2021-09-05 22:20:46.573 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-bundlemgr-oper-sub1@2015-11-09
+[2021-09-05 22:20:46.573 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-bundlemgr-oper-sub2@2015-11-09

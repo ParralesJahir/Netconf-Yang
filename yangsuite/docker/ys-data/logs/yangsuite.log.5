@@ -1,0 +1,1164 @@
+[2021-09-05 22:13:03.015 INFO    yangsuite.ysfilemanager.filemanager.repository : 181]
+Created YANG repository YANG repository 'ciscoiosxr-default-repo' owned by 'admin' (0 modules)
+[2021-09-05 22:13:03.128 ERROR                     django.request : 118]
+Internal Server Error: /devices/device-defaults/ciscoiosxr
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/ysdevices/views.py", line 30, in decorated
+    return decoratee(request, jsondata, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/ysdevices/views.py", line 80, in create_default_repo_yangset
+    schema_list = get_schema_list(key)
+  File "/usr/local/lib/python3.6/dist-packages/ysnetconf/views/download.py", line 98, in get_schema_list
+    ncs = NetconfSession.get(key)
+  File "/usr/local/lib/python3.6/dist-packages/ysnetconf/nconf.py", line 254, in get
+    cls.instances[key] = NetconfSSHSession(key)
+  File "/usr/local/lib/python3.6/dist-packages/ysnetconf/nconf.py", line 177, in __init__
+    .format(self.device_name))
+ysnetconf.nconf.NetconfNotSupported: Device "CiscoIOSXR" is not marked as supporting NETCONF
+[2021-09-05 22:13:10.791 DEBUG     yangsuite.ysdevices.devprofile : 184]
+Device profile list (filter: None): [{'name': 'CiscoIOSXR', 'key': 'ciscoiosxr', 'description': 'WJ'}]
+[2021-09-05 22:18:11.954 DEBUG     yangsuite.ysdevices.devprofile : 184]
+Device profile list (filter: None): [{'name': 'CiscoIOSXR', 'key': 'ciscoiosxr', 'description': 'WJ'}]
+[2021-09-05 22:18:51.510 INFO    yangsuite.ysnetconf.views.download : 101]
+Trying to connect now to "CiscoIOSXR" to get schema list
+[2021-09-05 22:18:52.275 INFO           yangsuite.ysnetconf.nconf : 152]
+Starting notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:18:53.276 INFO           yangsuite.ysnetconf.nconf : 168]
+Terminating notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:18:54.036 INFO           yangsuite.ysnetconf.nconf : 152]
+Starting notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:18:55.036 INFO           yangsuite.ysnetconf.nconf : 168]
+Terminating notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:18:55.792 INFO           yangsuite.ysnetconf.nconf : 152]
+Starting notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:18:56.793 INFO           yangsuite.ysnetconf.nconf : 168]
+Terminating notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:18:56.795 INFO    yangsuite.ysnetconf.views.download : 133]
+Got schema list from CiscoIOSXR - 348 schemas in list
+[2021-09-05 22:20:46.106 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:21:41.998 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:21:42.012 INFO    yangsuite.ysfilemanager.filemanager.mutableyangset :  44]
+Saved YANG set YANG set 'CISCOXR' owned by 'admin' (0 modules) to /ys-data/users/admin/yangsets/ciscoxr
+[2021-09-05 22:21:42.084 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:21:42.084 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:21:42.107 INFO    yangsuite.ysfilemanager.filemanager.yangset : 280]
+Loaded YANG set 'CISCOXR' owned by 'admin' (0 modules) from /ys-data/users/admin/yangsets/ciscoxr
+[2021-09-05 22:21:42.173 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:21:42.173 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:21:42.194 INFO    yangsuite.ysfilemanager.filemanager.yangset : 280]
+Loaded YANG set 'CISCOXR' owned by 'admin' (0 modules) from /ys-data/users/admin/yangsets/ciscoxr
+[2021-09-05 22:21:42.633 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'Cisco-IOS-XR-ha-eem-policy-oper': depends on module 'Cisco-IOS-XR-ha-eem-policy-oper-sub1' that was not scanned
+[2021-09-05 22:21:42.634 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'Cisco-IOS-XR-lpts-pre-ifib-oper': depends on module 'Cisco-IOS-XR-lpts-pre-ifib-oper-sub1' that was not scanned
+[2021-09-05 22:21:42.634 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'cisco-xr-netconf-monitoring-deviations': depends on module 'ietf-netconf-monitoring' that was not scanned
+[2021-09-05 22:21:42.634 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-if-aggregate': depends on module 'iana-if-type' that was not scanned
+[2021-09-05 22:21:42.635 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-interfaces': depends on module 'ietf-interfaces' that was not scanned
+[2021-09-05 22:21:42.635 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-mpls': depends on module 'openconfig-mpls-igp' that was not scanned
+[2021-09-05 22:21:42.635 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-mpls': depends on module 'openconfig-mpls-static' that was not scanned
+[2021-09-05 22:21:42.635 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-mpls': depends on module 'openconfig-mpls-te' that was not scanned
+[2021-09-05 22:21:45.570 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:21:45.571 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:21:45.640 INFO    yangsuite.ysfilemanager.filemanager.yangset : 280]
+Loaded YANG set 'CISCOXR' owned by 'admin' (346 modules) from /ys-data/users/admin/yangsets/ciscoxr
+[2021-09-05 22:21:46.242 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'Cisco-IOS-XR-ha-eem-policy-oper': depends on module 'Cisco-IOS-XR-ha-eem-policy-oper-sub1' that was not scanned
+[2021-09-05 22:21:46.243 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'Cisco-IOS-XR-lpts-pre-ifib-oper': depends on module 'Cisco-IOS-XR-lpts-pre-ifib-oper-sub1' that was not scanned
+[2021-09-05 22:21:46.246 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'cisco-xr-netconf-monitoring-deviations': depends on module 'ietf-netconf-monitoring' that was not scanned
+[2021-09-05 22:21:46.246 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-if-aggregate': depends on module 'iana-if-type' that was not scanned
+[2021-09-05 22:21:46.246 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-interfaces': depends on module 'ietf-interfaces' that was not scanned
+[2021-09-05 22:21:46.246 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-mpls': depends on module 'openconfig-mpls-igp' that was not scanned
+[2021-09-05 22:21:46.246 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-mpls': depends on module 'openconfig-mpls-static' that was not scanned
+[2021-09-05 22:21:46.246 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-mpls': depends on module 'openconfig-mpls-te' that was not scanned
+[2021-09-05 22:21:46.250 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-aaa-lib-cfg@2015-11-09
+[2021-09-05 22:21:46.261 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-aaa-locald-admin-cfg@2015-11-09
+[2021-09-05 22:21:46.261 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-aaa-locald-cfg@2015-11-09
+[2021-09-05 22:21:46.261 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-aaa-locald-oper@2015-11-09
+[2021-09-05 22:21:46.261 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-aaa-locald-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.261 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-aaa-protocol-radius-cfg@2015-11-09
+[2021-09-05 22:21:46.266 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 6 dependencies of Cisco-IOS-XR-aaa-protocol-radius-oper@2015-11-09
+[2021-09-05 22:21:46.266 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-aaa-protocol-radius-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.267 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-aaa-protocol-radius-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.267 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-aaa-tacacs-cfg@2015-11-09
+[2021-09-05 22:21:46.267 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-aaa-tacacs-oper@2015-11-09
+[2021-09-05 22:21:46.267 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-aaa-tacacs-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.267 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-bundlemgr-cfg@2015-11-09
+[2021-09-05 22:21:46.267 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-bundlemgr-oper@2015-11-09
+[2021-09-05 22:21:46.267 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-bundlemgr-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.268 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-bundlemgr-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.268 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-cdp-cfg@2015-07-30
+[2021-09-05 22:21:46.268 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-cdp-oper@2015-07-30
+[2021-09-05 22:21:46.268 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-cdp-oper-sub1@2015-07-30
+[2021-09-05 22:21:46.268 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-clns-isis-cfg@2015-11-09
+[2021-09-05 22:21:46.268 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-clns-isis-datatypes@2015-11-09
+[2021-09-05 22:21:46.268 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 6 dependencies of Cisco-IOS-XR-clns-isis-oper@2015-11-09
+[2021-09-05 22:21:46.268 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-clns-isis-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.269 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-clns-isis-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.269 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-config-mda-cfg@2015-11-09
+[2021-09-05 22:21:46.269 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-config-mibs-cfg@2015-01-07
+[2021-09-05 22:21:46.269 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-controller-optics-cfg@2015-11-09
+[2021-09-05 22:21:46.269 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-controller-optics-oper@2015-11-09
+[2021-09-05 22:21:46.269 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-controller-optics-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.269 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-controller-otu-cfg@2015-11-09
+[2021-09-05 22:21:46.269 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-controller-otu-oper@2015-11-09
+[2021-09-05 22:21:46.270 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-controller-otu-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.270 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-crypto-sam-cfg@2015-01-07
+[2021-09-05 22:21:46.270 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-crypto-sam-oper@2015-01-07
+[2021-09-05 22:21:46.270 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-crypto-sam-oper-sub1@2015-01-07
+[2021-09-05 22:21:46.279 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-crypto-ssh-cfg@2015-07-30
+[2021-09-05 22:21:46.279 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-crypto-ssh-oper@2015-06-02
+[2021-09-05 22:21:46.279 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-crypto-ssh-oper-sub1@2015-06-02
+[2021-09-05 22:21:46.279 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-drivers-media-eth-cfg@2015-07-30
+[2021-09-05 22:21:46.280 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-drivers-media-eth-oper@2015-10-14
+[2021-09-05 22:21:46.280 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-drivers-media-eth-oper-sub1@2015-10-14
+[2021-09-05 22:21:46.280 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-es-ace-cfg@2015-11-09
+[2021-09-05 22:21:46.280 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-es-acl-cfg@2015-11-09
+[2021-09-05 22:21:46.280 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-es-acl-datatypes@2015-11-09
+[2021-09-05 22:21:46.280 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-es-acl-oper@2015-11-09
+[2021-09-05 22:21:46.280 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-es-acl-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.281 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 13 dependencies of Cisco-IOS-XR-ethernet-cfm-cfg@2015-11-09
+[2021-09-05 22:21:46.281 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 8 dependencies of Cisco-IOS-XR-ethernet-cfm-oper@2015-11-09
+[2021-09-05 22:21:46.281 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ethernet-cfm-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.281 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ethernet-cfm-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.281 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ethernet-cfm-oper-sub3@2015-11-09
+[2021-09-05 22:21:46.281 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ethernet-cfm-oper-sub4@2015-11-09
+[2021-09-05 22:21:46.281 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 8 dependencies of Cisco-IOS-XR-ethernet-link-oam-cfg@2015-11-09
+[2021-09-05 22:21:46.282 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ethernet-link-oam-oper@2015-11-09
+[2021-09-05 22:21:46.282 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ethernet-link-oam-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.286 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ethernet-lldp-cfg@2015-11-09
+[2021-09-05 22:21:46.287 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-ethernet-lldp-oper@2015-11-09
+[2021-09-05 22:21:46.287 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ethernet-lldp-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.287 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ethernet-lldp-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.287 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 7 dependencies of Cisco-IOS-XR-fib-common-oper@2015-11-09
+[2021-09-05 22:21:46.287 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-fib-common-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.287 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-fib-common-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.287 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-fib-common-oper-sub3@2015-11-09
+[2021-09-05 22:21:46.288 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-fib-common-oper-sub4@2015-11-09
+[2021-09-05 22:21:46.288 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-flashmib-cfg@2015-12-15
+[2021-09-05 22:21:46.288 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-ha-eem-cfg@2015-07-30
+[2021-09-05 22:21:46.288 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ha-eem-oper@2015-01-07
+[2021-09-05 22:21:46.288 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ha-eem-oper-sub1@2015-01-07
+[2021-09-05 22:21:46.288 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ha-eem-policy-oper@2016-02-05
+[2021-09-05 22:21:46.288 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency Cisco-IOS-XR-ha-eem-policy-oper-sub1 is not in the yangset
+[2021-09-05 22:21:46.288 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-icpe-infra-cfg@2015-11-09
+[2021-09-05 22:21:46.298 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 11 dependencies of Cisco-IOS-XR-icpe-infra-oper@2015-11-09
+[2021-09-05 22:21:46.299 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-icpe-infra-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.299 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-icpe-infra-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.299 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-icpe-infra-oper-sub3@2015-11-09
+[2021-09-05 22:21:46.299 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-icpe-infra-oper-sub4@2015-11-09
+[2021-09-05 22:21:46.299 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-icpe-infra-oper-sub5@2015-11-09
+[2021-09-05 22:21:46.322 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-icpe-infra-oper-sub6@2015-11-09
+[2021-09-05 22:21:46.322 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-icpe-infra-oper-sub7@2015-11-09
+[2021-09-05 22:21:46.322 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-icpe-infra-oper-sub8@2015-11-09
+[2021-09-05 22:21:46.322 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-ifmgr-cfg@2015-07-30
+[2021-09-05 22:21:46.323 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ifmgr-oper@2015-07-30
+[2021-09-05 22:21:46.323 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ifmgr-oper-sub1@2015-07-30
+[2021-09-05 22:21:46.323 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ifmgr-oper-sub2@2015-07-30
+[2021-09-05 22:21:46.323 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-infra-alarm-logger-cfg@2015-07-30
+[2021-09-05 22:21:46.323 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-infra-alarm-logger-oper@2015-01-07
+[2021-09-05 22:21:46.323 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-infra-alarm-logger-oper-sub1@2015-01-07
+[2021-09-05 22:21:46.323 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-infra-ceredundancymib-cfg@2015-01-07
+[2021-09-05 22:21:46.323 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-infra-dumper-cfg@2015-11-09
+[2021-09-05 22:21:46.324 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-infra-infra-clock-cfg@2015-11-09
+[2021-09-05 22:21:46.324 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-infra-infra-locale-cfg@2015-11-09
+[2021-09-05 22:21:46.324 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-infra-objmgr-cfg@2015-11-09
+[2021-09-05 22:21:46.324 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-infra-objmgr-oper@2015-11-09
+[2021-09-05 22:21:46.324 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-infra-objmgr-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.324 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-infra-policymgr-oper@2015-11-09
+[2021-09-05 22:21:46.324 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-infra-policymgr-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.324 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-infra-policymgr-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.325 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-infra-rcmd-oper@2015-11-09
+[2021-09-05 22:21:46.325 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-infra-rcmd-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.325 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-infra-rmf-oper@2015-11-09
+[2021-09-05 22:21:46.325 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-infra-rmf-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.325 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-infra-rsi-cfg@2015-07-30
+[2021-09-05 22:21:46.325 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-infra-rsi-oper@2015-01-07
+[2021-09-05 22:21:46.325 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-infra-rsi-oper-sub1@2015-01-07
+[2021-09-05 22:21:46.325 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-infra-rsi-oper-sub2@2015-01-07
+[2021-09-05 22:21:46.326 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-infra-sla-cfg@2015-11-09
+[2021-09-05 22:21:46.331 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-infra-sla-oper@2015-11-09
+[2021-09-05 22:21:46.331 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-infra-statsd-cfg@2015-11-09
+[2021-09-05 22:21:46.331 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-infra-statsd-oper@2015-11-09
+[2021-09-05 22:21:46.331 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-infra-statsd-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.331 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-infra-syslog-cfg@2015-10-08
+[2021-09-05 22:21:46.331 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-infra-syslog-oper@2015-12-01
+[2021-09-05 22:21:46.331 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-infra-syslog-oper-sub1@2015-12-01
+[2021-09-05 22:21:46.332 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-infra-systemmib-cfg@2015-11-09
+[2021-09-05 22:21:46.332 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-bfd-cfg@2015-11-09
+[2021-09-05 22:21:46.332 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ip-bfd-oper@2015-11-09
+[2021-09-05 22:21:46.332 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ip-bfd-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.332 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ip-domain-cfg@2015-05-13
+[2021-09-05 22:21:46.332 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-domain-oper@2015-09-29
+[2021-09-05 22:21:46.332 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-domain-oper-sub1@2015-09-29
+[2021-09-05 22:21:46.332 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-ip-icmp-cfg@2015-11-09
+[2021-09-05 22:21:46.333 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ip-iep-cfg@2015-11-09
+[2021-09-05 22:21:46.333 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-iep-oper@2015-11-09
+[2021-09-05 22:21:46.333 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-iep-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.333 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ip-mobileip-cfg@2015-11-09
+[2021-09-05 22:21:46.333 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-ntp-admin-oper@2015-11-09
+[2021-09-05 22:21:46.333 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-ntp-admin-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.333 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-ntp-cfg@2015-11-09
+[2021-09-05 22:21:46.333 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-ntp-oper@2015-11-09
+[2021-09-05 22:21:46.339 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-ntp-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.339 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ip-pfilter-cfg@2015-11-09
+[2021-09-05 22:21:46.339 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-ip-pfilter-oper@2015-11-09
+[2021-09-05 22:21:46.339 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-ip-rib-cfg@2015-11-09
+[2021-09-05 22:21:46.339 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ip-rib-ipv4-oper@2015-11-09
+[2021-09-05 22:21:46.339 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ip-rib-ipv4-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.339 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ip-rib-ipv6-oper@2015-11-09
+[2021-09-05 22:21:46.340 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ip-rib-ipv6-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.340 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-rsvp-cfg@2015-11-09
+[2021-09-05 22:21:46.340 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-rsvp-oper@2015-11-09
+[2021-09-05 22:21:46.340 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-rsvp-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.340 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ip-static-cfg@2015-09-10
+[2021-09-05 22:21:46.340 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-ip-tcp-cfg@2015-11-09
+[2021-09-05 22:21:46.340 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 7 dependencies of Cisco-IOS-XR-ip-tcp-oper@2015-11-09
+[2021-09-05 22:21:46.340 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-tcp-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.341 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ip-tcp-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.341 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ip-tcp-oper-sub3@2015-11-09
+[2021-09-05 22:21:46.341 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ip-tcp-oper-sub4@2015-11-09
+[2021-09-05 22:21:46.341 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ip-tcp-oper-sub5@2015-11-09
+[2021-09-05 22:21:46.341 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ip-udp-cfg@2015-11-09
+[2021-09-05 22:21:46.341 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 6 dependencies of Cisco-IOS-XR-ip-udp-oper@2015-11-09
+[2021-09-05 22:21:46.341 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-udp-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.341 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ip-udp-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.342 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ip-udp-oper-sub3@2015-11-09
+[2021-09-05 22:21:46.342 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ip-udp-oper-sub4@2015-11-09
+[2021-09-05 22:21:46.342 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ipv4-ace-cfg@2015-11-09
+[2021-09-05 22:21:46.342 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv4-acl-cfg@2015-11-09
+[2021-09-05 22:21:46.342 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv4-acl-oper@2015-11-09
+[2021-09-05 22:21:46.342 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ipv4-acl-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.347 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv4-arp-cfg@2015-11-09
+[2021-09-05 22:21:46.347 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-ipv4-arp-oper@2015-11-09
+[2021-09-05 22:21:46.347 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv4-arp-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.347 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv4-arp-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.347 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 6 dependencies of Cisco-IOS-XR-ipv4-bgp-cfg@2015-08-27
+[2021-09-05 22:21:46.347 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-ipv4-bgp-oper@2015-08-27
+[2021-09-05 22:21:46.347 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv4-bgp-oper-sub1@2015-08-27
+[2021-09-05 22:21:46.348 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv4-hsrp-cfg@2015-11-09
+[2021-09-05 22:21:46.348 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv4-hsrp-oper@2015-11-09
+[2021-09-05 22:21:46.348 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv4-hsrp-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.348 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ipv4-io-cfg@2015-07-30
+[2021-09-05 22:21:46.348 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv4-io-oper@2015-10-20
+[2021-09-05 22:21:46.348 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ipv4-io-oper-sub1@2015-10-20
+[2021-09-05 22:21:46.348 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ipv4-io-oper-sub2@2015-10-20
+[2021-09-05 22:21:46.349 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-ipv4-ma-cfg@2015-07-30
+[2021-09-05 22:21:46.349 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 6 dependencies of Cisco-IOS-XR-ipv4-ma-oper@2015-10-20
+[2021-09-05 22:21:46.349 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ipv4-ma-oper-sub1@2015-10-20
+[2021-09-05 22:21:46.349 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ipv4-ospf-cfg@2015-11-09
+[2021-09-05 22:21:46.349 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-ipv4-ospf-oper@2015-11-09
+[2021-09-05 22:21:46.349 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ipv4-ospf-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.349 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv4-ospf-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.349 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-ipv4-telnet-cfg@2015-11-09
+[2021-09-05 22:21:46.350 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-ipv4-telnet-mgmt-cfg@2015-11-09
+[2021-09-05 22:21:46.350 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ipv4-vrrp-cfg@2015-11-09
+[2021-09-05 22:21:46.350 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv4-vrrp-oper@2015-11-09
+[2021-09-05 22:21:46.350 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv4-vrrp-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.350 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv6-ace-cfg@2015-11-09
+[2021-09-05 22:21:46.350 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-ipv6-acl-cfg@2015-11-09
+[2021-09-05 22:21:46.350 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-ipv6-acl-datatypes@2015-11-09
+[2021-09-05 22:21:46.357 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-ipv6-acl-oper@2015-11-09
+[2021-09-05 22:21:46.357 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ipv6-acl-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.357 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-ipv6-io-cfg@2015-11-09
+[2021-09-05 22:21:46.357 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ipv6-io-oper@2015-11-09
+[2021-09-05 22:21:46.357 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-ipv6-io-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.358 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv6-ma-cfg@2015-07-30
+[2021-09-05 22:21:46.358 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ipv6-ma-oper@2015-10-20
+[2021-09-05 22:21:46.358 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ipv6-ma-oper-sub1@2015-10-20
+[2021-09-05 22:21:46.358 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv6-nd-cfg@2015-11-09
+[2021-09-05 22:21:46.358 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv6-nd-oper@2015-11-09
+[2021-09-05 22:21:46.358 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv6-nd-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.367 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv6-new-dhcpv6d-oper@2015-11-09
+[2021-09-05 22:21:46.367 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv6-new-dhcpv6d-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.367 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-ipv6-ospfv3-cfg@2015-11-09
+[2021-09-05 22:21:46.367 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv6-ospfv3-oper@2015-11-09
+[2021-09-05 22:21:46.367 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-ipv6-ospfv3-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.367 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 7 dependencies of Cisco-IOS-XR-l2-eth-infra-cfg@2015-11-09
+[2021-09-05 22:21:46.367 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 6 dependencies of Cisco-IOS-XR-l2-eth-infra-oper@2015-11-09
+[2021-09-05 22:21:46.368 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-l2-eth-infra-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.368 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-l2-eth-infra-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.368 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-l2-eth-infra-oper-sub3@2015-11-09
+[2021-09-05 22:21:46.368 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-l2vpn-cfg@2015-11-09
+[2021-09-05 22:21:46.368 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 7 dependencies of Cisco-IOS-XR-l2vpn-oper@2015-11-09
+[2021-09-05 22:21:46.368 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-l2vpn-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.368 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-l2vpn-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.368 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-l2vpn-oper-sub3@2015-11-09
+[2021-09-05 22:21:46.369 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-l2vpn-oper-sub4@2015-11-09
+[2021-09-05 22:21:46.369 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-lib-keychain-cfg@2015-07-30
+[2021-09-05 22:21:46.369 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-lib-keychain-macsec-cfg@2015-11-09
+[2021-09-05 22:21:46.369 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-lib-keychain-oper@2015-01-07
+[2021-09-05 22:21:46.379 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-lib-keychain-oper-sub1@2015-01-07
+[2021-09-05 22:21:46.381 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-lib-mpp-cfg@2015-07-30
+[2021-09-05 22:21:46.381 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-lib-mpp-oper@2015-01-07
+[2021-09-05 22:21:46.381 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-lib-mpp-oper-sub1@2015-01-07
+[2021-09-05 22:21:46.381 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-lpts-lib-cfg@2015-11-09
+[2021-09-05 22:21:46.381 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-lpts-pre-ifib-cfg@2015-11-09
+[2021-09-05 22:21:46.382 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-lpts-pre-ifib-oper@2016-02-22
+[2021-09-05 22:21:46.382 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency Cisco-IOS-XR-lpts-pre-ifib-oper-sub1 is not in the yangset
+[2021-09-05 22:21:46.386 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-man-netconf-cfg@2016-03-15
+[2021-09-05 22:21:46.386 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-man-xml-ttyagent-cfg@2015-07-30
+[2021-09-05 22:21:46.386 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-man-xml-ttyagent-oper@2015-07-30
+[2021-09-05 22:21:46.386 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-man-xml-ttyagent-oper-sub1@2015-07-30
+[2021-09-05 22:21:46.386 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-mdrv-lib-cfg@2015-11-09
+[2021-09-05 22:21:46.386 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-mpls-ldp-cfg@2015-11-09
+[2021-09-05 22:21:46.387 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-mpls-ldp-oper@2015-11-09
+[2021-09-05 22:21:46.387 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-mpls-ldp-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.387 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-mpls-ldp-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.387 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-mpls-lsd-cfg@2015-11-09
+[2021-09-05 22:21:46.387 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-mpls-lsd-oper@2015-11-09
+[2021-09-05 22:21:46.387 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-mpls-lsd-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.387 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-mpls-oam-cfg@2015-11-09
+[2021-09-05 22:21:46.387 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-mpls-static-cfg@2015-11-09
+[2021-09-05 22:21:46.388 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-mpls-static-oper@2015-11-09
+[2021-09-05 22:21:46.388 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-mpls-static-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.388 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-mpls-te-cfg@2015-11-09
+[2021-09-05 22:21:46.388 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-mpls-te-datatypes@2015-11-09
+[2021-09-05 22:21:46.388 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 10 dependencies of Cisco-IOS-XR-mpls-te-oper@2015-11-09
+[2021-09-05 22:21:46.388 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-mpls-te-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.388 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-mpls-te-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.388 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-mpls-te-oper-sub3@2015-11-09
+[2021-09-05 22:21:46.389 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-mpls-te-oper-sub4@2015-11-09
+[2021-09-05 22:21:46.389 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of Cisco-IOS-XR-mpls-te-oper-sub5@2015-11-09
+[2021-09-05 22:21:46.389 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-mpls-te-oper-sub6@2015-11-09
+[2021-09-05 22:21:46.389 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-mpls-te-oper-sub7@2015-11-09
+[2021-09-05 22:21:46.389 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-mpls-te-oper-sub8@2015-11-09
+[2021-09-05 22:21:46.389 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-mpls-vpn-oper@2015-11-09
+[2021-09-05 22:21:46.389 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-mpls-vpn-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.389 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-nto-misc-shprocmem-oper@2015-11-09
+[2021-09-05 22:21:46.390 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-nto-misc-shprocmem-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.390 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-parser-cfg@2015-06-02
+[2021-09-05 22:21:46.390 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-pfi-im-cmd-oper@2015-11-09
+[2021-09-05 22:21:46.390 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of Cisco-IOS-XR-pfi-im-cmd-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.390 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-pfi-im-cmd-oper-sub2@2015-11-09
+[2021-09-05 22:21:46.390 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-plat-chas-invmgr-oper@2015-01-07
+[2021-09-05 22:21:46.390 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-plat-chas-invmgr-oper-sub1@2015-01-07
+[2021-09-05 22:21:46.390 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-plat-chas-invmgr-oper-sub2@2015-01-07
+[2021-09-05 22:21:46.401 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-pmengine-cfg@2015-11-09
+[2021-09-05 22:21:46.402 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-pmengine-oper@2015-11-09
+[2021-09-05 22:21:46.402 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-pmengine-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.402 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-policy-repository-cfg@2015-08-27
+[2021-09-05 22:21:46.402 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-policy-repository-oper@2015-11-09
+[2021-09-05 22:21:46.402 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-policy-repository-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.402 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-qos-ma-oper@2015-01-07
+[2021-09-05 22:21:46.408 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-qos-ma-oper-sub1@2015-01-07
+[2021-09-05 22:21:46.408 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-qos-ma-oper-sub2@2015-01-07
+[2021-09-05 22:21:46.408 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-rgmgr-cfg@2015-07-30
+[2021-09-05 22:21:46.408 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-rgmgr-oper@2015-01-07
+[2021-09-05 22:21:46.408 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-rgmgr-oper-sub1@2015-01-07
+[2021-09-05 22:21:46.409 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-segment-routing-ms-cfg@2015-11-09
+[2021-09-05 22:21:46.409 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-segment-routing-ms-oper@2015-11-09
+[2021-09-05 22:21:46.409 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-segment-routing-ms-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.409 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-shellutil-cfg@2015-10-12
+[2021-09-05 22:21:46.409 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-shellutil-filesystem-oper@2015-11-09
+[2021-09-05 22:21:46.409 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-shellutil-filesystem-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.409 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-shellutil-oper@2015-01-07
+[2021-09-05 22:21:46.409 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-shellutil-oper-sub1@2015-01-07
+[2021-09-05 22:21:46.410 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-snmp-agent-cfg@2015-10-27
+[2021-09-05 22:21:46.410 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 9 dependencies of Cisco-IOS-XR-snmp-agent-oper@2015-10-08
+[2021-09-05 22:21:46.410 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-snmp-agent-oper-sub1@2015-10-08
+[2021-09-05 22:21:46.410 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-snmp-agent-oper-sub2@2015-10-08
+[2021-09-05 22:21:46.410 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-snmp-agent-oper-sub3@2015-10-08
+[2021-09-05 22:21:46.413 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-snmp-agent-oper-sub4@2015-10-08
+[2021-09-05 22:21:46.413 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-snmp-agent-oper-sub5@2015-10-08
+[2021-09-05 22:21:46.413 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-snmp-agent-oper-sub6@2015-10-08
+[2021-09-05 22:21:46.414 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-snmp-entitymib-cfg@2015-01-07
+[2021-09-05 22:21:46.414 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-snmp-entstatemib-cfg@2015-07-27
+[2021-09-05 22:21:46.414 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-snmp-frucontrolmib-cfg@2015-01-07
+[2021-09-05 22:21:46.414 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-snmp-ifmib-cfg@2015-05-14
+[2021-09-05 22:21:46.414 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 11 dependencies of Cisco-IOS-XR-snmp-ifmib-oper@2015-01-07
+[2021-09-05 22:21:46.414 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-snmp-ifmib-oper-sub1@2015-01-07
+[2021-09-05 22:21:46.414 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-snmp-syslogmib-cfg@2015-12-01
+[2021-09-05 22:21:46.415 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-traffmon-netflow-cfg@2015-11-09
+[2021-09-05 22:21:46.415 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-tty-management-cfg@2015-09-25
+[2021-09-05 22:21:46.415 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-tty-management-cmd-oper@2015-11-09
+[2021-09-05 22:21:46.415 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-tty-management-cmd-oper-sub1@2015-11-09
+[2021-09-05 22:21:46.415 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 10 dependencies of Cisco-IOS-XR-tty-management-oper@2015-01-07
+[2021-09-05 22:21:46.415 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of Cisco-IOS-XR-tty-management-oper-sub1@2015-01-07
+[2021-09-05 22:21:46.415 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-tty-server-cfg@2015-07-30
+[2021-09-05 22:21:46.415 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 7 dependencies of Cisco-IOS-XR-tty-server-oper@2015-07-30
+[2021-09-05 22:21:46.416 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-tty-server-oper-sub1@2015-07-30
+[2021-09-05 22:21:46.416 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-tty-server-oper-sub2@2015-07-30
+[2021-09-05 22:21:46.416 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-tty-server-oper-sub3@2015-07-30
+[2021-09-05 22:21:46.418 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-tty-server-oper-sub4@2015-07-30
+[2021-09-05 22:21:46.418 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-tty-server-oper-sub5@2015-07-30
+[2021-09-05 22:21:46.418 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of Cisco-IOS-XR-tty-vty-cfg@2015-01-07
+[2021-09-05 22:21:46.418 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 2 dependencies of Cisco-IOS-XR-wd-cfg@2015-11-09
+[2021-09-05 22:21:46.418 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 7 dependencies of bgp@2015-05-15
+[2021-09-05 22:21:46.419 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 6 dependencies of bgp-multiprotocol@2015-05-15
+[2021-09-05 22:21:46.419 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of bgp-operational@2015-05-15
+[2021-09-05 22:21:46.419 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of bgp-policy@2015-05-15
+[2021-09-05 22:21:46.419 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of bgp-types@2015-05-15
+[2021-09-05 22:21:46.419 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 8 dependencies of cisco-xr-bgp-deviations@2015-10-21
+[2021-09-05 22:21:46.419 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 6 dependencies of cisco-xr-bgp-policy-deviations@2015-10-21
+[2021-09-05 22:21:46.419 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of cisco-xr-netconf-monitoring-deviations@2016-02-16
+[2021-09-05 22:21:46.420 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency ietf-netconf-monitoring is not in the yangset
+[2021-09-05 22:21:46.420 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 4 dependencies of cisco-xr-routing-policy-deviations@2015-10-21
+[2021-09-05 22:21:46.420 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 6 dependencies of openconfig-if-aggregate@2015-11-20
+[2021-09-05 22:21:46.422 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency ietf-interfaces is not in the yangset
+[2021-09-05 22:21:46.422 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency iana-if-type is not in the yangset
+[2021-09-05 22:21:46.422 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 5 dependencies of openconfig-if-ethernet@2015-11-20
+[2021-09-05 22:21:46.422 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency ietf-interfaces is not in the yangset
+[2021-09-05 22:21:46.422 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency iana-if-type is not in the yangset
+[2021-09-05 22:21:46.423 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of openconfig-interfaces@2015-11-20
+[2021-09-05 22:21:46.423 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency ietf-interfaces is not in the yangset
+[2021-09-05 22:21:46.423 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 13 dependencies of openconfig-mpls@2015-11-05
+[2021-09-05 22:21:46.423 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency ietf-interfaces is not in the yangset
+[2021-09-05 22:21:46.423 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency openconfig-mpls-static is not in the yangset
+[2021-09-05 22:21:46.423 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency openconfig-mpls-te is not in the yangset
+[2021-09-05 22:21:46.423 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency openconfig-mpls-igp is not in the yangset
+[2021-09-05 22:21:46.423 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of openconfig-mpls-ldp@2015-11-05
+[2021-09-05 22:21:46.424 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 7 dependencies of openconfig-mpls-rsvp@2015-11-05
+[2021-09-05 22:21:46.424 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency ietf-interfaces is not in the yangset
+[2021-09-05 22:21:46.425 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 6 dependencies of openconfig-mpls-sr@2015-11-05
+[2021-09-05 22:21:46.425 DEBUG   yangsuite.ysfilemanager.filemanager.base : 289]
+Dependency ietf-interfaces is not in the yangset
+[2021-09-05 22:21:46.425 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of openconfig-mpls-types@2015-11-05
+[2021-09-05 22:21:46.425 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of openconfig-types@2015-10-09
+[2021-09-05 22:21:46.425 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 1 dependencies of policy-types@2015-05-15
+[2021-09-05 22:21:46.425 DEBUG   yangsuite.ysfilemanager.filemanager.base : 286]
+Checking 3 dependencies of routing-policy@2015-05-15
+[2021-09-05 22:21:46.426 INFO    yangsuite.ysfilemanager.filemanager.base : 294]
+Missing dependencies for YANG set 'CISCOXR' owned by 'admin' (346 modules): [('Cisco-IOS-XR-ha-eem-policy-oper-sub1', 'unknown', None), ('Cisco-IOS-XR-lpts-pre-ifib-oper-sub1', 'unknown', None), ('iana-if-type', 'unknown', None), ('ietf-interfaces', 'unknown', None), ('ietf-netconf-monitoring', 'unknown', None), ('openconfig-mpls-igp', 'unknown', None), ('openconfig-mpls-static', 'unknown', None), ('openconfig-mpls-te', 'unknown', None)]
+[2021-09-05 22:22:27.214 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:22:27.217 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:22:27.253 INFO    yangsuite.ysfilemanager.filemanager.yangset : 280]
+Loaded YANG set 'CISCOXR' owned by 'admin' (346 modules) from /ys-data/users/admin/yangsets/ciscoxr
+[2021-09-05 22:22:27.256 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:22:27.256 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:22:27.301 INFO    yangsuite.ysfilemanager.filemanager.yangset : 280]
+Loaded YANG set 'CISCOXR' owned by 'admin' (346 modules) from /ys-data/users/admin/yangsets/ciscoxr
+[2021-09-05 22:22:27.301 INFO        yangsuite.ysyangtree.context : 288]
+Initializing context for path 'YANG set 'CISCOXR' owned by 'admin' (346 modules)'
+[2021-09-05 22:22:27.302 INFO        yangsuite.ysyangtree.context : 296]
+Context stored with reference 'admin'
+[2021-09-05 22:22:27.302 DEBUG       yangsuite.ysyangtree.context : 396]
+No module loading requested.
+[2021-09-05 22:22:27.302 INFO        yangsuite.ysyangtree.context : 340]
+Context 'admin+ciscoxr' now fully loaded and ready
+[2021-09-05 22:22:27.600 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'Cisco-IOS-XR-ha-eem-policy-oper': depends on module 'Cisco-IOS-XR-ha-eem-policy-oper-sub1' that was not scanned
+[2021-09-05 22:22:27.600 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'Cisco-IOS-XR-lpts-pre-ifib-oper': depends on module 'Cisco-IOS-XR-lpts-pre-ifib-oper-sub1' that was not scanned
+[2021-09-05 22:22:27.601 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'cisco-xr-netconf-monitoring-deviations': depends on module 'ietf-netconf-monitoring' that was not scanned
+[2021-09-05 22:22:27.601 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-if-aggregate': depends on module 'iana-if-type' that was not scanned
+[2021-09-05 22:22:27.601 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-interfaces': depends on module 'ietf-interfaces' that was not scanned
+[2021-09-05 22:22:27.601 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-mpls': depends on module 'openconfig-mpls-igp' that was not scanned
+[2021-09-05 22:22:27.601 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-mpls': depends on module 'openconfig-mpls-static' that was not scanned
+[2021-09-05 22:22:27.601 DEBUG   yangsuite.ysfilemanager.filemanager.base : 496]
+Module 'openconfig-mpls': depends on module 'openconfig-mpls-te' that was not scanned
+[2021-09-05 22:22:27.603 DEBUG       yangsuite.ysyangtree.context : 400]
+Loading module(s) {'Cisco-IOS-XR-aaa-lib-cfg'} from repository YANG set 'CISCOXR' owned by 'admin' (346 modules)
+[2021-09-05 22:22:27.603 DEBUG       yangsuite.ysyangtree.context : 407]
+Will load upstream modules as well: ['Cisco-IOS-XR-aaa-locald-cfg', 'Cisco-IOS-XR-aaa-protocol-radius-cfg', 'Cisco-IOS-XR-aaa-tacacs-cfg']
+[2021-09-05 22:22:27.661 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-aaa-lib-cfg
+[2021-09-05 22:22:27.692 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-aaa-locald-cfg
+[2021-09-05 22:22:27.851 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-aaa-protocol-radius-cfg
+[2021-09-05 22:22:27.881 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-aaa-tacacs-cfg
+[2021-09-05 22:22:27.882 DEBUG       yangsuite.ysyangtree.context : 518]
+Have now loaded 6 modules, of 346 available in repository
+[2021-09-05 22:22:27.884 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-aaa-lib-cfg', None) and ('Cisco-IOS-XR-aaa-locald-cfg', None)!
+[2021-09-05 22:22:27.884 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-aaa-locald-cfg', None) and ('Cisco-IOS-XR-aaa-lib-cfg', None)!
+[2021-09-05 22:22:44.640 DEBUG     yangsuite.ysdevices.devprofile : 184]
+Device profile list (filter: None): [{'name': 'CiscoIOSXR', 'key': 'ciscoiosxr', 'description': 'WJ'}]
+[2021-09-05 22:24:13.675 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:24:13.676 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:24:13.729 INFO    yangsuite.ysfilemanager.filemanager.yangset : 280]
+Loaded YANG set 'CISCOXR' owned by 'admin' (346 modules) from /ys-data/users/admin/yangsets/ciscoxr
+[2021-09-05 22:24:13.729 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:24:13.730 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:24:13.779 INFO    yangsuite.ysfilemanager.filemanager.yangset : 280]
+Loaded YANG set 'CISCOXR' owned by 'admin' (346 modules) from /ys-data/users/admin/yangsets/ciscoxr
+[2021-09-05 22:24:13.779 DEBUG       yangsuite.ysyangtree.context : 159]
+Cached ctx has same yangset
+[2021-09-05 22:24:13.780 DEBUG       yangsuite.ysyangtree.ymodels : 154]
+Added 4 extra modules {'Cisco-IOS-XR-ifmgr-cfg', 'Cisco-IOS-XR-snmp-agent-cfg', 'Cisco-IOS-XR-infra-sla-cfg', 'Cisco-IOS-XR-l2-eth-infra-cfg'} to base modules ['Cisco-IOS-XR-ethernet-cfm-cfg'] as augmentation targets and/or supermodules
+[2021-09-05 22:24:13.780 DEBUG       yangsuite.ysyangtree.context : 400]
+Loading module(s) {'Cisco-IOS-XR-l2-eth-infra-cfg', 'Cisco-IOS-XR-ethernet-cfm-cfg', 'Cisco-IOS-XR-infra-sla-cfg', 'Cisco-IOS-XR-ifmgr-cfg', 'Cisco-IOS-XR-snmp-agent-cfg'} from repository YANG set 'CISCOXR' owned by 'admin' (346 modules)
+[2021-09-05 22:24:13.780 DEBUG       yangsuite.ysyangtree.context : 407]
+Will load upstream modules as well: ['Cisco-IOS-XR-bundlemgr-cfg', 'Cisco-IOS-XR-cdp-cfg', 'Cisco-IOS-XR-clns-isis-cfg', 'Cisco-IOS-XR-config-mibs-cfg', 'Cisco-IOS-XR-controller-optics-cfg', 'Cisco-IOS-XR-controller-otu-cfg', 'Cisco-IOS-XR-drivers-media-eth-cfg', 'Cisco-IOS-XR-ethernet-cfm-cfg', 'Cisco-IOS-XR-ethernet-link-oam-cfg', 'Cisco-IOS-XR-ethernet-lldp-cfg', 'Cisco-IOS-XR-flashmib-cfg', 'Cisco-IOS-XR-icpe-infra-cfg', 'Cisco-IOS-XR-infra-ceredundancymib-cfg', 'Cisco-IOS-XR-infra-rsi-cfg', 'Cisco-IOS-XR-infra-statsd-cfg', 'Cisco-IOS-XR-infra-systemmib-cfg', 'Cisco-IOS-XR-ip-bfd-cfg', 'Cisco-IOS-XR-ip-ntp-cfg', 'Cisco-IOS-XR-ip-pfilter-cfg', 'Cisco-IOS-XR-ip-rsvp-cfg', 'Cisco-IOS-XR-ipv4-arp-cfg', 'Cisco-IOS-XR-ipv4-bgp-cfg', 'Cisco-IOS-XR-ipv4-hsrp-cfg', 'Cisco-IOS-XR-ipv4-io-cfg', 'Cisco-IOS-XR-ipv4-ospf-cfg', 'Cisco-IOS-XR-ipv4-vrrp-cfg', 'Cisco-IOS-XR-ipv6-ma-cfg', 'Cisco-IOS-XR-ipv6-nd-cfg', 'Cisco-IOS-XR-ipv6-ospfv3-cfg', 'Cisco-IOS-XR-l2-eth-infra-cfg', 'Cisco-IOS-XR-l2vpn-cfg', 'Cisco-IOS-XR-mdrv-lib-cfg', 'Cisco-IOS-XR-mpls-ldp-cfg', 'Cisco-IOS-XR-mpls-te-cfg', 'Cisco-IOS-XR-pmengine-cfg', 'Cisco-IOS-XR-snmp-entitymib-cfg', 'Cisco-IOS-XR-snmp-entstatemib-cfg', 'Cisco-IOS-XR-snmp-frucontrolmib-cfg', 'Cisco-IOS-XR-snmp-ifmib-cfg', 'Cisco-IOS-XR-snmp-syslogmib-cfg', 'Cisco-IOS-XR-traffmon-netflow-cfg']
+[2021-09-05 22:24:13.930 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-bundlemgr-cfg
+[2021-09-05 22:24:13.944 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-cdp-cfg
+[2021-09-05 22:24:14.484 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-clns-isis-cfg
+[2021-09-05 22:24:14.487 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-config-mibs-cfg
+[2021-09-05 22:24:14.508 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-controller-optics-cfg
+[2021-09-05 22:24:14.558 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-controller-otu-cfg
+[2021-09-05 22:24:14.574 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-drivers-media-eth-cfg
+[2021-09-05 22:24:15.326 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ethernet-cfm-cfg
+[2021-09-05 22:24:15.391 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ethernet-link-oam-cfg
+[2021-09-05 22:24:15.403 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ethernet-lldp-cfg
+[2021-09-05 22:24:15.406 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-flashmib-cfg
+[2021-09-05 22:24:15.420 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-icpe-infra-cfg
+[2021-09-05 22:24:15.435 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ifmgr-cfg
+[2021-09-05 22:24:15.445 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-infra-ceredundancymib-cfg
+[2021-09-05 22:24:15.487 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-infra-rsi-cfg
+[2021-09-05 22:24:15.488 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-infra-sla-cfg
+[2021-09-05 22:24:15.493 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-infra-statsd-cfg
+[2021-09-05 22:24:15.495 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-infra-systemmib-cfg
+[2021-09-05 22:24:15.521 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ip-bfd-cfg
+[2021-09-05 22:24:15.567 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ip-ntp-cfg
+[2021-09-05 22:24:15.586 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ip-pfilter-cfg
+[2021-09-05 22:24:15.646 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ip-rsvp-cfg
+[2021-09-05 22:24:15.679 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ipv4-arp-cfg
+[2021-09-05 22:24:16.503 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ipv4-bgp-cfg
+[2021-09-05 22:24:16.572 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ipv4-hsrp-cfg
+[2021-09-05 22:24:16.594 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ipv4-io-cfg
+[2021-09-05 22:24:17.576 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ipv4-ospf-cfg
+[2021-09-05 22:24:17.637 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ipv4-vrrp-cfg
+[2021-09-05 22:24:17.661 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ipv6-ma-cfg
+[2021-09-05 22:24:17.713 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ipv6-nd-cfg
+[2021-09-05 22:24:18.847 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ipv6-ospfv3-cfg
+[2021-09-05 22:24:18.874 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-l2-eth-infra-cfg
+[2021-09-05 22:24:19.047 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-l2vpn-cfg
+[2021-09-05 22:24:19.050 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-mdrv-lib-cfg
+[2021-09-05 22:24:19.192 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-mpls-ldp-cfg
+[2021-09-05 22:24:20.054 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-mpls-te-cfg
+[2021-09-05 22:24:20.313 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-pmengine-cfg
+[2021-09-05 22:24:20.390 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-snmp-agent-cfg
+[2021-09-05 22:24:20.395 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-snmp-entitymib-cfg
+[2021-09-05 22:24:20.398 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-snmp-entstatemib-cfg
+[2021-09-05 22:24:20.401 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-snmp-frucontrolmib-cfg
+[2021-09-05 22:24:20.411 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-snmp-ifmib-cfg
+[2021-09-05 22:24:20.414 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-snmp-syslogmib-cfg
+[2021-09-05 22:24:20.471 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-traffmon-netflow-cfg
+[2021-09-05 22:24:20.471 DEBUG       yangsuite.ysyangtree.context : 518]
+Have now loaded 58 modules, of 346 available in repository
+[2021-09-05 22:24:20.476 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix dt1 is used for both ('Cisco-IOS-XR-ethernet-cfm-datatypes', None) and ('Cisco-IOS-XR-l2-eth-infra-datatypes', None)!
+[2021-09-05 22:24:20.477 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2-eth-infra-cfg', None) and ('Cisco-IOS-XR-l2vpn-cfg', None)!
+[2021-09-05 22:24:20.477 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2-eth-infra-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.477 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2-eth-infra-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.478 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix dt1 is used for both ('Cisco-IOS-XR-ethernet-cfm-datatypes', None) and ('Cisco-IOS-XR-ip-iarm-datatypes', None)!
+[2021-09-05 22:24:20.478 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2-eth-infra-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.479 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a3 is used for both ('Cisco-IOS-XR-snmp-agent-cfg', None) and ('Cisco-IOS-XR-ifmgr-cfg', None)!
+[2021-09-05 22:24:20.479 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2-eth-infra-cfg', None) and ('Cisco-IOS-XR-rgmgr-cfg', None)!
+[2021-09-05 22:24:20.479 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.480 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a3 is used for both ('Cisco-IOS-XR-snmp-agent-cfg', None) and ('Cisco-IOS-XR-ifmgr-cfg', None)!
+[2021-09-05 22:24:20.480 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix dt1 is used for both ('Cisco-IOS-XR-ethernet-cfm-datatypes', None) and ('Cisco-IOS-XR-clns-isis-datatypes', None)!
+[2021-09-05 22:24:20.481 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.481 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2-eth-infra-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.481 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.482 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.483 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2-eth-infra-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.483 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.484 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.484 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.485 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.485 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.485 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2-eth-infra-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.486 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.486 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.487 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.489 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.489 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix dt1 is used for both ('Cisco-IOS-XR-ethernet-cfm-datatypes', None) and ('Cisco-IOS-XR-ipv4-bgp-datatypes', None)!
+[2021-09-05 22:24:20.490 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-infra-rsi-cfg', None)!
+[2021-09-05 22:24:20.491 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2-eth-infra-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.491 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.491 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.492 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.492 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.493 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.493 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.493 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.494 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.495 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.495 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix dt1 is used for both ('Cisco-IOS-XR-l2-eth-infra-datatypes', None) and ('Cisco-IOS-XR-ip-iarm-datatypes', None)!
+[2021-09-05 22:24:20.495 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.496 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix dt1 is used for both ('Cisco-IOS-XR-l2-eth-infra-datatypes', None) and ('Cisco-IOS-XR-ethernet-cfm-datatypes', None)!
+[2021-09-05 22:24:20.496 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-l2-eth-infra-cfg', None)!
+[2021-09-05 22:24:20.497 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.497 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-l2-eth-infra-cfg', None)!
+[2021-09-05 22:24:20.497 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a3 is used for both ('Cisco-IOS-XR-snmp-agent-cfg', None) and ('Cisco-IOS-XR-ifmgr-cfg', None)!
+[2021-09-05 22:24:20.498 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-rgmgr-cfg', None)!
+[2021-09-05 22:24:20.592 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.592 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-l2-eth-infra-cfg', None)!
+[2021-09-05 22:24:20.593 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix dt1 is used for both ('Cisco-IOS-XR-l2-eth-infra-datatypes', None) and ('Cisco-IOS-XR-ethernet-cfm-datatypes', None)!
+[2021-09-05 22:24:20.593 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-l2-eth-infra-cfg', None)!
+[2021-09-05 22:24:20.594 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a3 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.594 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.594 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.595 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix dt1 is used for both ('Cisco-IOS-XR-l2-eth-infra-datatypes', None) and ('Cisco-IOS-XR-ip-iarm-datatypes', None)!
+[2021-09-05 22:24:20.595 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.596 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix dt1 is used for both ('Cisco-IOS-XR-l2-eth-infra-datatypes', None) and ('Cisco-IOS-XR-ethernet-cfm-datatypes', None)!
+[2021-09-05 22:24:20.596 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-l2-eth-infra-cfg', None)!
+[2021-09-05 22:24:20.596 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a3 is used for both ('Cisco-IOS-XR-ifmgr-cfg', None) and ('Cisco-IOS-XR-snmp-agent-cfg', None)!
+[2021-09-05 22:24:20.597 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-l2-eth-infra-cfg', None)!
+[2021-09-05 22:24:20.597 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-l2vpn-cfg', None) and ('Cisco-IOS-XR-rgmgr-cfg', None)!
+[2021-09-05 22:24:20.606 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-snmp-agent-cfg', None) and ('Cisco-IOS-XR-ifmgr-cfg', None)!
+[2021-09-05 22:24:20.606 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-snmp-agent-cfg', None) and ('Cisco-IOS-XR-ifmgr-cfg', None)!
+[2021-09-05 22:24:20.607 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-snmp-agent-cfg', None) and ('Cisco-IOS-XR-ifmgr-cfg', None)!
+[2021-09-05 22:24:20.607 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix dt1 is used for both ('Cisco-IOS-XR-clns-isis-datatypes', None) and ('Cisco-IOS-XR-ipv4-bgp-datatypes', None)!
+[2021-09-05 22:24:20.608 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-snmp-agent-cfg', None) and ('Cisco-IOS-XR-infra-rsi-cfg', None)!
+[2021-09-05 22:24:20.608 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix dt1 is used for both ('Cisco-IOS-XR-clns-isis-datatypes', None) and ('Cisco-IOS-XR-ethernet-cfm-datatypes', None)!
+[2021-09-05 22:24:20.609 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-snmp-agent-cfg', None) and ('Cisco-IOS-XR-ifmgr-cfg', None)!
+[2021-09-05 22:24:20.609 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-snmp-agent-cfg', None) and ('Cisco-IOS-XR-l2-eth-infra-cfg', None)!
+[2021-09-05 22:24:20.609 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-snmp-agent-cfg', None) and ('Cisco-IOS-XR-l2-eth-infra-cfg', None)!
+[2021-09-05 22:24:20.610 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a3 is used for both ('Cisco-IOS-XR-snmp-agent-cfg', None) and ('Cisco-IOS-XR-ifmgr-cfg', None)!
+[2021-09-05 22:27:14.648 DEBUG     yangsuite.ysdevices.devprofile : 184]
+Device profile list (filter: None): [{'name': 'CiscoIOSXR', 'key': 'ciscoiosxr', 'description': 'WJ'}]
+[2021-09-05 22:27:25.412 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:27:25.414 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:27:25.456 INFO    yangsuite.ysfilemanager.filemanager.yangset : 280]
+Loaded YANG set 'CISCOXR' owned by 'admin' (346 modules) from /ys-data/users/admin/yangsets/ciscoxr
+[2021-09-05 22:30:10.454 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:30:10.455 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:30:10.505 INFO    yangsuite.ysfilemanager.filemanager.yangset : 280]
+Loaded YANG set 'CISCOXR' owned by 'admin' (346 modules) from /ys-data/users/admin/yangsets/ciscoxr
+[2021-09-05 22:30:10.505 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:30:10.506 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  76]
+Split userset "admin+ciscoxr" to user "admin", setname/reponame "ciscoxr"
+[2021-09-05 22:30:10.549 INFO    yangsuite.ysfilemanager.filemanager.yangset : 280]
+Loaded YANG set 'CISCOXR' owned by 'admin' (346 modules) from /ys-data/users/admin/yangsets/ciscoxr
+[2021-09-05 22:30:10.550 DEBUG       yangsuite.ysyangtree.context : 159]
+Cached ctx has same yangset
+[2021-09-05 22:30:10.550 DEBUG       yangsuite.ysyangtree.context : 400]
+Loading module(s) {'Cisco-IOS-XR-ipv4-ma-cfg'} from repository YANG set 'CISCOXR' owned by 'admin' (346 modules)
+[2021-09-05 22:30:10.556 DEBUG       yangsuite.ysyangtree.context : 407]
+Will load upstream modules as well: []
+[2021-09-05 22:30:10.575 DEBUG       yangsuite.ysyangtree.context : 500]
+Successfully loaded Cisco-IOS-XR-ipv4-ma-cfg
+[2021-09-05 22:30:10.575 DEBUG       yangsuite.ysyangtree.context : 518]
+Have now loaded 59 modules, of 346 available in repository
+[2021-09-05 22:30:10.581 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a1 is used for both ('Cisco-IOS-XR-aaa-lib-cfg', None) and ('Cisco-IOS-XR-aaa-locald-cfg', None)!
+[2021-09-05 22:30:10.582 WARNING     yangsuite.ysyangtree.ymodels : 518]
+Prefix a2 is used for both ('Cisco-IOS-XR-aaa-locald-cfg', None) and ('Cisco-IOS-XR-aaa-lib-cfg', None)!
+[2021-09-05 22:30:10.609 INFO        yangsuite.ysyangtree.ymodels :  88]
+Replacing cached instance YSYangModels (YANG models ('Cisco-IOS-XR-ethernet-cfm-cfg', 'Cisco-IOS-XR-ifmgr-cfg', 'Cisco-IOS-XR-infra-sla-cfg', 'Cisco-IOS-XR-l2-eth-infra-cfg', 'Cisco-IOS-XR-snmp-agent-cfg'), context YSContext (repository YANG set 'CISCOXR' owned by 'admin' (346 modules)) with 59 modules loaded) with YSYangModels (YANG models ('Cisco-IOS-XR-aaa-lib-cfg', 'Cisco-IOS-XR-ipv4-ma-cfg'), context YSContext (repository YANG set 'CISCOXR' owned by 'admin' (346 modules)) with 59 modules loaded) under key "admin"
+[2021-09-05 22:30:58.112 INFO           yangsuite.ysnetconf.nconf : 152]
+Starting notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:30:59.114 INFO           yangsuite.ysnetconf.nconf : 168]
+Terminating notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:30:59.115 DEBUG          yangsuite.ysnetconf.nconf :1666]
+Datastores for "get" on device "ciscoiosxr": ['running', 'candidate']
+[2021-09-05 22:30:59.902 INFO           yangsuite.ysnetconf.nconf : 152]
+Starting notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:31:00.903 INFO           yangsuite.ysnetconf.nconf : 168]
+Terminating notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:31:00.904 DEBUG          yangsuite.ysnetconf.nconf :1666]
+Datastores for "edit-config" on device "ciscoiosxr": ['candidate']
+[2021-09-05 22:31:01.623 INFO           yangsuite.ysnetconf.nconf : 152]
+Starting notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:31:02.624 INFO           yangsuite.ysnetconf.nconf : 168]
+Terminating notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:31:02.624 DEBUG          yangsuite.ysnetconf.nconf :1666]
+Datastores for "get-config" on device "ciscoiosxr": ['running', 'candidate']
+[2021-09-05 22:31:04.923 DEBUG     yangsuite.ysdevices.devprofile : 184]
+Device profile list (filter: None): [{'name': 'CiscoIOSXR', 'key': 'ciscoiosxr', 'description': 'WJ'}]
+[2021-09-05 22:32:18.412 ERROR          yangsuite.ysnetconf.nconf : 425]
+Connection refused with SSHError by device: Negotiation failed: Error reading SSH protocol banner[Errno 104] Connection reset by peer
+[2021-09-05 22:32:18.413 ERROR      yangsuite.ysnetconf.views.rpc : 329]
+502: Bad Gateway Error
+[2021-09-05 22:32:37.244 DEBUG      yangsuite.ysnetconf.views.rpc : 139]
+Generating RPC(s) for {'gentype': 'raw', 'commit': '', 'prefix_namespaces': 'minimal', 'segment': 1, 'cfgd': {'proto-op': 'get-config', 'dsstore': 'running', 'modules': {}}}
+[2021-09-05 22:32:37.970 INFO           yangsuite.ysnetconf.nconf : 152]
+Starting notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)
+[2021-09-05 22:32:38.971 INFO           yangsuite.ysnetconf.nconf : 168]
+Terminating notification thread for SessionKey(user='admin', device='ciscoiosxr', stream=None)

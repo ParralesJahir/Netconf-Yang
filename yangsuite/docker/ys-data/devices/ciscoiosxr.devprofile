@@ -1,0 +1,56 @@
+{
+  "base": {
+    "profile_name": "CiscoIOSXR",
+    "description": "WJ",
+    "address": "10.0.0.1",
+    "username": "admin",
+    "timeout": 30,
+    "variables": {},
+    "certificate": "",
+    "clientcert": "",
+    "clientkey": "",
+    "secure_override": "",
+    "encrypted_password": "LwJ5sC5A3q9l8Ep0iMNzOA==$gAAAAABhNUH8VDyGp3pOpQ64hgcEtALF8Rw1moBBnfd_hJ7hQvxbd86tWHpOJ0NfLaRdPUD2ymy-TXCwU-DfK8x1QnHAp5hbdQ=="
+  },
+  "gnmi": {
+    "enabled": false,
+    "platform": "iosxe",
+    "port": 50052,
+    "secure_port": 9339,
+    "secure": false,
+    "secure_override": ""
+  },
+  "netconf": {
+    "enabled": true,
+    "device_variant": "default",
+    "port": 830,
+    "ignore_keys": true,
+    "address": "",
+    "username": "",
+    "timeout": "",
+    "encrypted_password": ""
+  },
+  "restconf": {
+    "enabled": false,
+    "encoding": "https",
+    "base_url": "/restconf",
+    "port": 443,
+    "address": "",
+    "username": "",
+    "encrypted_password": ""
+  },
+  "ssh": {
+    "enabled": false,
+    "device_variant": "generic_termserver",
+    "address": "",
+    "port": 22,
+    "delay_factor": 1.0,
+    "username": "",
+    "timeout": "",
+    "secure": false,
+    "encrypted_password": ""
+  },
+  "yangsuite": {
+    "user": "admin"
+  }
+}
