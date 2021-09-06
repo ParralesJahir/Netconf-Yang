@@ -1,0 +1,48 @@
+<main class="col-md-8 ms-sm-auto col-lg-10 px-md-4">
+  <div class="table-responsive">
+      <div class="table-wrapper">
+          <div class="table-title">
+              <div class="row">
+                  <div class="col-sm-5">
+                      <h2>Interfaces</h2>
+                  </div>
+              </div>
+          </div>
+          <table class="table table-striped table-hover">
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th>Interfaces Name</th>
+                      <th>Physic Address</th>
+                      <th>Data In</th>
+                      <th>Data Out</th>
+                      <th>Status</th>
+                      <th>Last Contact</th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                <% interfaces.forEach(function(interface){ %>
+                  <tr>
+                     <td></td>
+                     <td><%= interface.name %></td>
+                     <td><%= interface.address %></td>                       
+                     <td><%= interface.dataIn %> bits</td>
+                     <td><%= interface.dataOut %> bits</td>
+                      <% if(interface.status === 'on'){ %>
+                        <td><span class="status text-success">&bull;</span></td>
+                      <% } else{ %>  
+                        <td><span class="status text-danger">&bull;</span></td>
+                      <% } %>
+                     <td><%= interface.lastContact.toLocaleDateString('en-US') %></td>
+                     <td>
+                         <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
+                     </td>
+                   </tr>
+                    
+                 <% }); %>
+              </tbody>
+          </table>
+      </div>
+  </div>  
+</main>

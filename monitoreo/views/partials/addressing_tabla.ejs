@@ -1,0 +1,64 @@
+<main class="col-md-8 ms-sm-auto col-lg-10 px-md-4">
+  <div class="table-responsive">
+      <div class="table-wrapper">
+          <div class="table-title">
+              <div class="row">
+                  <div class="col-sm-5">
+                      <h2>Addressing</h2>
+                  </div>
+              </div>
+          </div>
+          <table class="table table-striped table-hover">
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th>Interfaces Name</th>
+                      <th>Ipv4 Address</th>
+                      <th>Ipv4 Prefix</th>
+                      <th>Ipv6 Address</th>
+                      <th>Ipv6 Prefix</th>
+                      <th>Status</th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                <% addresses.forEach(function(address){ %>
+                  <tr>
+                     <td></td>
+                     <td><%= address.name %></td>
+                      <% if(address.ipv4Address === ''){ %>
+                        <td>-</td>
+                      <% } else{ %>  
+                        <td><%= address.ipv4Address %></td> 
+                      <% } %>
+                      <% if(address.ipv4Prefix === ''){ %>
+                        <td>-</td>
+                      <% } else{ %>  
+                        <td><%= address.ipv4Prefix %></td> 
+                      <% } %>
+                      <% if(address.ipv6Address === ''){ %>
+                        <td>-</td>
+                      <% } else{ %>  
+                        <td><%= address.ipv6Address %></td> 
+                      <% } %>
+                      <% if(address.ipv6Prefix === ''){ %>
+                        <td>-</td>
+                      <% } else{ %>  
+                        <td><%= address.ipv6Prefix %></td>
+                      <% } %>
+                      <% if(address.status === 'on'){ %>
+                        <td><span class="status text-success">&bull;</span></td>
+                      <% } else{ %>  
+                        <td><span class="status text-danger">&bull;</span></td>
+                      <% } %>
+                     <td>
+                         <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
+                     </td>
+                   </tr>
+                    
+                 <% }); %>
+              </tbody>
+          </table>
+      </div>
+  </div>  
+</main>
